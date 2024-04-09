@@ -1,0 +1,41 @@
+BEGIN:VCARD
+VERSION:3.0
+REV:2024-04-08T00:00:00Z
+PROFILE:VCARD
+SOURCE:http://personaldomain.com/vcard.vcf
+CLASS:public
+
+FN:Alex Suprun
+
+ORG:Company Name
+LOGO;TYPE=PNG:http://workdomain.com/logo.png
+ADR;TYPE=WORK;TYPE=PREF:Company Name;Ste 100;7900 4th St N;St. Petersburg;FL;33702;USA
+URL;TYPE=WORK;TYPE=PREF:https://workdomain.com/
+TEL;TYPE=WORK;TYPE=VOICE:+1 (727) 555-0000
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:hello@workdomain.com
+TITLE:Avatar
+ROLE:Member
+
+N:Suprun;Alex;;;
+NICKNAME:Spuns
+PHOTO;TYPE=PNG;VALUE=URI:http://personaldomain.com/photo.jpg
+ADR;TYPE=HOME:;;1234 Main St N;St. Petersburg;FL;33701;USA
+TEL;TYPE=CELL;TYPE=VOICE;TYPE=PREF:+1 (727) 222-4444
+TEL;TYPE=OTHER;TYPE=VOICE:+1 (727) 321-9876
+EMAIL;TYPE=INTERNET;TYPE=HOME:alexsuprun@personaldomain.com
+EMAIL;TYPE=INTERNET;TYPE=OTHER:alexsuprun@otherdomain.com
+URL;TYPE=HOME:https://personaldomain.com/
+URL;TYPE=OTHER:https://otherdomain.com/
+TZ:-0500
+
+X-SOCIALPROFILE;TYPE=Facebook:alexsuprun
+X-SOCIALPROFILE;TYPE=Twitter:alexsuprun
+X-SOCIALPROFILE;TYPE=LinkedIn:alexsuprun
+X-SOCIALPROFILE;TYPE=Instagram:alexsuprun
+X-SOCIALPROFILE;TYPE=YouTube:alexsuprun
+X-SOCIALPROFILE;TYPE=TikTok:alexsuprun
+
+CATEGORIES:avatar,persona,mockup
+
+NOTE:I'm Alex Suprun, a connoisseur of the subtle art of connection. I weave the mundane into the magical with ease, turning pet whispers into the talk of the town. My knack for reading a room's vibe rivals ancient oracles, and my adventures often involve epic quests for legendary late-night snacks.
+END:VCARD

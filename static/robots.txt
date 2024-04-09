@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+# Specific disallow rules
+Disallow: /*.js$
+Disallow: /*.json
+Disallow: /cookie-policy
+Disallow: /disclaimers
+Disallow: /privacy-policy
+Disallow: /terms-of-service
+
+# Specific directives for GPTBot
+User-agent: GPTBot
+Disallow: /

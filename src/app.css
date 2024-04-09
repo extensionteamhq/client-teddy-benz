@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,1000,700,900&display=swap");
+
+@tailwind base;
+
+@layer base {
+    html {
+        @apply text-neutral-900;
+        @apply bg-neutral-100;
+    }
+    html.dark {
+        @apply text-neutral-100;
+        @apply bg-neutral-900;
+    }
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+p {
+    @apply leading-6;
+    @apply my-6;
+}
+
+/* buttons */
+button {
+    @apply !inline-flex px-5 py-3 my-4 text-base items-center text-center rounded-lg shadow-sm focus-visible:outline transition-all duration-300 ease-in cursor-pointer disabled:opacity-100
+    
+    focus:ring-2
+    disabled:focus:ring-0
+    focus:ring-neutral-900
+    dark:focus:ring-neutral-100
+    
+    text-neutral-100 
+    disabled:text-neutral-100 
+    dark:text-neutral-900 
+    dark:disabled:text-neutral-900 
+    
+    hover:text-neutral-900 
+    disabled:hover:text-neutral-900 
+    dark:hover:text-neutral-100 
+    dark:disabled:hover:text-neutral-100 
+
+    !bg-neutral-900 
+    dark:!bg-neutral-100 
+    
+    hover:!bg-neutral-300 
+    disabled:hover:!bg-neutral-300 
+    dark:hover:!bg-neutral-600 
+    dark:disabled:hover:!bg-neutral-600;
+}
+
+button.secondary {
+    @apply 
+    
+    text-neutral-900 
+    disabled:text-neutral-900 
+    dark:text-neutral-100 
+    dark:disabled:text-neutral-100 
+    
+    hover:text-neutral-900 
+    disabled:hover:text-neutral-900 
+    dark:hover:text-neutral-100 
+    dark:disabled:hover:text-neutral-100 
+
+    !bg-neutral-200 
+    dark:!bg-neutral-800 
+    
+    hover:!bg-neutral-300 
+    disabled:hover:!bg-neutral-300 
+    dark:hover:!bg-neutral-700 
+    dark:disabled:hover:!bg-neutral-700;
+}
+
+button.hamburger,
+button.closeModal {
+    @apply 
+
+    block !border-0 px-0 pr-4 py-0 m-0 mt-2 text-base items-center text-center rounded-none shadow-none hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:!outline-none focus-visible:!outline-none active:!outline-none !transition-none duration-300 ease-in cursor-pointer disabled:opacity-100 lg:!hidden
+
+    focus:!ring-0
+    disabled:focus:!ring-0
+    focus:!ring-transparent
+    dark:focus:!ring-transparent
+    
+    text-neutral-900 
+    disabled:text-neutral-900 
+    dark:text-neutral-100 
+    dark:disabled:text-neutral-100 
+    
+    hover:text-neutral-900 
+    disabled:hover:text-neutral-900 
+    dark:hover:text-neutral-100 
+    dark:disabled:hover:text-neutral-100 
+
+    !bg-transparent 
+    dark:!bg-transparent 
+    
+    hover:!bg-transparent 
+    disabled:hover:!bg-transparent 
+    dark:hover:!bg-transparent 
+    dark:disabled:hover:!bg-transparent;
+}
+
+button.closeModal {
+    @apply lg:!block p-0 pr-2;
+}
+
+button.mode {
+    @apply 
+    transition-all duration-300 ease-in cursor-pointer
+
+    focus:!outline-none
+    disabled:focus:!outline-none
+    focus:!ring-0
+    disabled:focus:!ring-0
+    focus:!ring-transparent
+    dark:focus:!ring-transparent
+
+    !bg-neutral-100 
+    dark:!bg-neutral-900
+
+    hover:!bg-neutral-300
+    dark:hover:!bg-neutral-600;
+}
+/* button.colormode {
+    @apply !rounded-lg !text-xs !p-2.5 !fixed bottom-2 right-2 shadow-none transition-none
+
+    focus:!outline-none
+    disabled:focus:!outline-none
+    focus:!ring-0
+    disabled:focus:!ring-0
+    focus:!ring-transparent
+    dark:focus:!ring-transparent
+    
+    !text-neutral-900 
+    disabled:!text-neutral-900 
+    dark:!text-neutral-100 
+    dark:disabled:!text-neutral-100 
+    
+    hover:!text-neutral-900 
+    disabled:hover:!text-neutral-900 
+    dark:hover:!text-neutral-100 
+    dark:disabled:hover:!text-neutral-100 
+
+    !bg-transparent 
+    dark:!bg-transparent 
+    
+    hover:!bg-transparent 
+    disabled:hover:!bg-transparent 
+    dark:hover:!bg-transparent 
+    dark:disabled:hover:!bg-transparent;
+} */
+
+/* modals */
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.100);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.contents {
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    pointer-events: auto;
+    position: relative;
+}
+
+.actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}

@@ -98,6 +98,7 @@ interface LayoutConfig {
     service: SectionVisibility;
     about: SectionVisibility;
     video: SectionVisibility;
+    gallery: SectionVisibility;
     cta: SectionVisibility;
     sponsors: SectionVisibility;
     newsletter: SectionVisibility;
@@ -218,6 +219,9 @@ import About_01 from '$lib/components/sections/About_01.svelte';
 // videos
 import ContentVideo_01 from '$lib/components/sections/ContentVideo_01.svelte';
 
+// gallerys
+import Gallery_01 from '$lib/components/sections/Gallery_01.svelte';
+
 // ctas
 import CallToAction_01 from '$lib/components/sections/CallToAction_01.svelte';
 
@@ -260,6 +264,10 @@ export const layoutConfig: LayoutConfig = {
     video: {
         component: ContentVideo_01,
         visible: false,
+    },
+    gallery: {
+        component: Gallery_01,
+        visible: true,
     },
     cta: {
         component: CallToAction_01,

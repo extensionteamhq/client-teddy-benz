@@ -78,6 +78,11 @@
         <svelte:component this={layoutConfig.sponsors.component} />
     {/if}
 
+    <!-- gallery -->
+    {#if layoutConfig.gallery.visible}
+        <svelte:component this={layoutConfig.gallery.component} />
+    {/if}
+
     <!-- newsletter -->
     {#if layoutConfig.newsletter.visible}
         <svelte:component this={layoutConfig.newsletter.component} />

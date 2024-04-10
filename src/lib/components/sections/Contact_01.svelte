@@ -90,7 +90,7 @@
                     <div class="mx-auto static">
                         <form action="https://formspree.io/f/mknlbnzq" method="POST" class="static px-6 lg:px-8 lg:py-10" on:submit={handleFormSubmit}>
                             <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-                                <h2 class="text-3xl font-bold tracking-tight mb-4">Send Me A Message</h2>
+                                <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-center">Send A Message</h2>
                                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                     <div>
                                         <label for="fname" class="block text-sm font-semibold leading-6">First name</label>

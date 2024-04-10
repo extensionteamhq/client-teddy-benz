@@ -7,13 +7,25 @@
                 href="https://extension.team/"
                 target="_blank"
                 class="block py-12 px-8 text-center bg-neutral-50 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700 rounded-lg shadow-lg shadow-neutral-900/8">
-                <svg class="mx-auto h-14 text-gray-600 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 779.5 779.5" xml:space="preserve"
+                <svg
+                    class="mx-auto h-14 text-neutral-900 dark:text-neutral-100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 779.5 779.5"
+                    xml:space="preserve"
                     ><path
                         fill="#FFCB31"
                         d="M769.1 154.1c-10.3-14-27.1-22-46.1-22H330.8l-16.5 43.8H723c3.6 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8H123.1c-35.5 0-71.8 27.5-82.8 62.5-6.1 19.5-3.5 39.1 7.2 53.6 10.3 14 27.1 22 46.1 22l522.3.2c3.6 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8l-415-.1c-35.4 0-71.8 27.4-82.8 62.5-6.1 19.5-3.5 39.1 7.2 53.6 10.3 14 27.1 22 46.1 22l338.3.1c3.5 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8H16.5L0 647.4h450.9c35.5 0 71.8-27.5 82.8-62.5 6.1-19.5 3.5-39.1-7.2-53.6-10.3-14-27.1-22-46.1-22l-338.4-.1c-3.6 0-8.3-.7-10.8-4.1-2.3-3.2-2.6-8.5-.7-14.6 5.3-16.9 24.4-31.8 40.9-31.8l415 .1c35.5 0 71.8-27.5 82.8-62.5 6.1-19.5 3.5-39.1-7.2-53.6-10.3-13.9-27.1-22-46.1-22l-522.3-.2c-3.5 0-8.3-.7-10.8-4.1-2.3-3.2-2.6-8.5-.7-14.6 5.3-16.9 24.4-31.8 41-31.8h570.4c35.5 0 71.8-27.5 82.8-62.5 6.1-19.3 3.5-38.9-7.2-53.4z" /></svg>
                 <p class="text-lg font-bold mt-3.5 mb-4">Extension Team</p>
                 <p class="font-light mt-3.5 mb-4"
                     >Marketing Solutions To Reach Your Target Audience and Expand Your Brand. They're An Extension To Your Team.</p>
+                <p class="font-light mt-3.5 mb-4"
+                    ><svg
+                        class="h-4 inline-block align-middle mr-2 pb-1 text-neutral-900 dark:text-neutral-100"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/up-right-from-square?f=classic&s=solid - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                            d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg
+                    >Visit Website</p>
             </a>
             <a
                 href="https://solidclose.com/"
@@ -40,6 +52,14 @@
                     ></svg>
                 <p class="text-lg font-bold mt-3.5 mb-4">Solid Close</p>
                 <p class="font-light mt-3.5 mb-4">Top-Tier Transaction Coordination Services for Seasoned Real Estate Investors.</p>
+                <p class="font-light mt-3.5 mb-4"
+                    ><svg
+                        class="h-4 inline-block align-middle mr-2 pb-1 text-neutral-900 dark:text-neutral-100"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/up-right-from-square?f=classic&s=solid - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                            d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg
+                    >Visit Website</p>
             </a>
         </div>
     </div>

@@ -93,8 +93,7 @@
                                                             use:qr={{
                                                                 data: fullPath,
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
-                                                                shape: 'square',
-                                                                errorCorrectionLevel: 'M',
+                                                                shape: 'circle',
                                                             }} />
                                                     </a>
                                                 </div>

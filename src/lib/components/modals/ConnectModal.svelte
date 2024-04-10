@@ -1,6 +1,15 @@
+<!-- <script context="module">
+    export async function load({ page }) {
+        const fullPath = `${page.url.origin}/vcard.vcf`;
+
+        return { props: { fullPath } };
+    }
+</script> -->
+
 <script lang="ts">
     // @ts-nocheck
     // svelte core
+    import { page } from '$app/stores';
     import { onMount, tick } from 'svelte';
     import { writable } from 'svelte/store';
     import { fade } from 'svelte/transition';
@@ -29,7 +38,7 @@
         isLoading.set(false);
     });
 
-    import staticData from '/vcard.vcf?url&raw';
+    $: hostname = $page.url.hostname;
 </script>
 
 {#if isOpen}
@@ -78,7 +87,7 @@
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{
-                                                                data: staticData,
+                                                                data: `${hostname}/vcard.vcf`,
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
                                                                 shape: 'circle',
                                                                 errorCorrectionLevel: 'M',

@@ -41,7 +41,7 @@
     $: protocol = $page.url.protocol;
     $: hostname = $page.url.hostname;
     $: port = $page.url.port;
-    $: domain = `${$page.url.protocol}${$page.url.hostname}${$page.url.port ? `:${$page.url.port}` : ''}`;
+    $: domain = `${$page.url.protocol}//${$page.url.hostname}${$page.url.port ? `:${$page.url.port}` : ''}`;
     $: fullPath = `${domain}/vcard.vcf`;
 </script>
 
@@ -87,7 +87,7 @@
                                             <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg h-screen">
                                                 <h2 class="text-3xl font-bold tracking-tight mb-4">My Digital Business Card</h2>
                                                 <div class="px-10 my-10 space-y-4 text-base leading-7">
-                                                    <a href={layoutConfig.vCard.src} title={layoutConfig.vCard.alt} download={layoutConfig.vCard.src}>
+                                                    <a href={fullPath} accesskey="q" title={layoutConfig.vCard.alt} download={layoutConfig.vCard.src}>
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{

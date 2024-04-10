@@ -93,12 +93,12 @@
                                                             use:qr={{
                                                                 data: fullPath,
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
-                                                                shape: 'circle',
+                                                                shape: 'square',
                                                                 errorCorrectionLevel: 'M',
                                                             }} />
                                                     </a>
                                                 </div>
-                                                <ol class="ml-5 my-2 list-decimal">
+                                                <ol class="ml-5 my-2 list-decimal sr-only">
                                                     <li>Click or Scan the QR Code.</li>
                                                     <li>Open/View the downloaded file.</li>
                                                     <li>Create or Save it to your address book as a new contact.</li>

@@ -108,8 +108,8 @@ const site: SiteInfo = {
     siteName: 'Personal Branded Site',
     timeZone: '-500',
 
-    orgName: 'Company Name',
-    orgTitle: 'Avatar',
+    orgName: 'Personal Branded Websites',
+    orgTitle: 'Avatar Specialist',
     orgRole: 'Member',
 
     fullName: 'Alex Suprun',
@@ -129,7 +129,7 @@ const site: SiteInfo = {
     addPostalCode_01: '33701',
     addCountry_01: 'USA',
     addType_02: 'WORK',
-    addressName_02: 'Personal Branded Websites',
+    addressName_02: '',
     addStreet1_02: '7900 1st St N',
     addStreet2_02: 'Ste 100',
     addCity_02: 'St. Petersburg',
@@ -173,7 +173,8 @@ const site: SiteInfo = {
     socialType_09: '',
     socialHandle_09: '',
 
-    vCardNote: "I'm Alex Suprun, a connoisseur of the subtle art of connection. I weave the mundane into the magical with ease, turning pet whispers into the talk of the town. My knack for reading a room's vibe rivals ancient oracles, and my adventures often involve epic quests for legendary late-night snacks.",
+    vCardNote:
+        "I'm Alex Suprun, a connoisseur of the subtle art of connection. I weave the mundane into the magical with ease, turning pet whispers into the talk of the town. My knack for reading a room's vibe rivals ancient oracles, and my adventures often involve epic quests for legendary late-night snacks.",
 };
 
 // Define a vCard object
@@ -191,39 +192,39 @@ const logo: Logo = {
 // Import components as needed…
 
 // navbars
-import NavBar_01 from "$lib/components/sections/NavBar_01.svelte";
-import NavBar_02 from "$lib/components/sections/NavBar_02.svelte";
-import NavBar_03 from "$lib/components/sections/NavBar_03.svelte";
+import NavBar_01 from '$lib/components/sections/NavBar_01.svelte';
+import NavBar_02 from '$lib/components/sections/NavBar_02.svelte';
+import NavBar_03 from '$lib/components/sections/NavBar_03.svelte';
 
 // heros
-import Hero_01 from "$lib/components/sections/Hero_01.svelte";
-import Hero_02 from "$lib/components/sections/Hero_02.svelte";
+import Hero_01 from '$lib/components/sections/Hero_01.svelte';
+import Hero_02 from '$lib/components/sections/Hero_02.svelte';
 
 // features
-import Feature_01 from "$lib/components/sections/Feature_01.svelte";
-import Feature_02 from "$lib/components/sections/Feature_02.svelte";
+import Feature_01 from '$lib/components/sections/Feature_01.svelte';
+import Feature_02 from '$lib/components/sections/Feature_02.svelte';
 
 // services
-import Service_01 from "$lib/components/sections/Service_01.svelte";
+import Service_01 from '$lib/components/sections/Service_01.svelte';
 
 // abouts
-import About_01 from "$lib/components/sections/About_01.svelte";
+import About_01 from '$lib/components/sections/About_01.svelte';
 
 // videos
-import ContentVideo_01 from "$lib/components/sections/ContentVideo_01.svelte";
+import ContentVideo_01 from '$lib/components/sections/ContentVideo_01.svelte';
 
 // ctas
-import CallToAction_01 from "$lib/components/sections/CallToAction_01.svelte";
+import CallToAction_01 from '$lib/components/sections/CallToAction_01.svelte';
 
 // newsletters
-import Newsletter_01 from "$lib/components/forms/Newsletter_01.svelte";
+import Newsletter_01 from '$lib/components/forms/Newsletter_01.svelte';
 
 // contacts
-import Contact_01 from "$lib/components/sections/Contact_01.svelte";
+import Contact_01 from '$lib/components/sections/Contact_01.svelte';
 
 // footers
-import Footer_01 from "$lib/components/sections/Footer_01.svelte";
-import Footer_02 from "$lib/components/sections/Footer_02.svelte";
+import Footer_01 from '$lib/components/sections/Footer_01.svelte';
+import Footer_02 from '$lib/components/sections/Footer_02.svelte';
 
 // Define and export the layout configuration
 export const layoutConfig: LayoutConfig = {

@@ -76,7 +76,7 @@
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{
-                                                                data: '/vcard.vcf',
+                                                                data: './vcard.vcf?raw',
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
                                                                 shape: 'circle',
                                                             }} />

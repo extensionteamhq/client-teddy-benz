@@ -99,6 +99,7 @@ interface LayoutConfig {
     about: SectionVisibility;
     video: SectionVisibility;
     cta: SectionVisibility;
+    sponsors: SectionVisibility;
     newsletter: SectionVisibility;
     contact: SectionVisibility;
     footer: any; // Any Svelte component
@@ -220,6 +221,9 @@ import ContentVideo_01 from '$lib/components/sections/ContentVideo_01.svelte';
 // ctas
 import CallToAction_01 from '$lib/components/sections/CallToAction_01.svelte';
 
+// sponsors
+import Sponsors_01 from '$lib/components/sections/Sponsors_01.svelte';
+
 // newsletters
 import Newsletter_01 from '$lib/components/forms/Newsletter_01.svelte';
 
@@ -260,6 +264,10 @@ export const layoutConfig: LayoutConfig = {
     cta: {
         component: CallToAction_01,
         visible: false,
+    },
+    sponsors: {
+        component: Sponsors_01,
+        visible: true,
     },
     newsletter: {
         component: Newsletter_01,

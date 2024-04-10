@@ -1,6 +1,6 @@
 <script lang="ts">
     // svelte core
-    
+
     // svelte plugins
     import { Modals, closeModal, openModal } from 'svelte-modals';
     // flowbite plugins
@@ -12,74 +12,79 @@
 </script>
 
 <svelte:head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Homepage</title>
-  <meta property="og:title" content="" />
-  <meta name="description" content="" />
-  <meta property="og:description" content="" />
-  <meta name="author" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:type" content="website" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "",
-        "postalCode": "",
-        "addressRegion": "",
-        "addressLocality": ""
-      },
-      "description": "",
-      "image": "",
-      "email": "",
-      "url": ""
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+    <meta property="og:title" content="" />
+    <meta name="description" content="" />
+    <meta property="og:description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "",
+                "postalCode": "",
+                "addressRegion": "",
+                "addressLocality": ""
+            },
+            "description": "",
+            "image": "",
+            "email": "",
+            "url": ""
+        }
+    </script>
 </svelte:head>
 
 <!-- The `container` class sets the max-width of an element to match the min-width of the current breakpoint. This is useful if you’d prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport. -->
 <main class="my-24 mx-auto px-8" id="home">
     <!-- hero -->
     <svelte:component this={layoutConfig.hero} />
-    
+
     <!-- feature -->
     {#if layoutConfig.feature.visible}
-      <svelte:component this={layoutConfig.feature.component} />
+        <svelte:component this={layoutConfig.feature.component} />
     {/if}
 
     <!-- services -->
     {#if layoutConfig.service.visible}
-      <svelte:component this={layoutConfig.service.component} />
+        <svelte:component this={layoutConfig.service.component} />
     {/if}
 
     <!-- about -->
     {#if layoutConfig.about.visible}
-      <svelte:component this={layoutConfig.about.component} />
+        <svelte:component this={layoutConfig.about.component} />
     {/if}
-    
+
     <!-- video -->
     {#if layoutConfig.video.visible}
-      <svelte:component this={layoutConfig.video.component} />
+        <svelte:component this={layoutConfig.video.component} />
     {/if}
-    
+
     <!-- cta -->
     {#if layoutConfig.cta.visible}
-      <svelte:component this={layoutConfig.cta.component} />
+        <svelte:component this={layoutConfig.cta.component} />
     {/if}
-    
+
+    <!-- sponsors -->
+    {#if layoutConfig.sponsors.visible}
+        <svelte:component this={layoutConfig.sponsors.component} />
+    {/if}
+
     <!-- newsletter -->
     {#if layoutConfig.newsletter.visible}
-      <svelte:component this={layoutConfig.newsletter.component} />
+        <svelte:component this={layoutConfig.newsletter.component} />
     {/if}
 
     <!-- contact -->
     {#if layoutConfig.contact.visible}
-      <svelte:component this={layoutConfig.contact.component} />
+        <svelte:component this={layoutConfig.contact.component} />
     {/if}
 </main>

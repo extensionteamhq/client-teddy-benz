@@ -28,6 +28,8 @@
         // Now, set isLoading to false to hide the spinner and show the content
         isLoading.set(false);
     });
+
+    import staticData from '/vcard.vcf?url&raw';
 </script>
 
 {#if isOpen}
@@ -76,9 +78,10 @@
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{
-                                                                data: './vcard.vcf?raw',
+                                                                data: staticData,
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
                                                                 shape: 'circle',
+                                                                errorCorrectionLevel: 'M',
                                                             }} />
                                                     </a>
                                                 </div>

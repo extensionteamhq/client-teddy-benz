@@ -47,7 +47,7 @@
 
 {#if isOpen}
     <div role="dialog" class="modal">
-        <div class="contents relative">
+        <div class="contents static">
             {#if $isLoading}
                 <div class="flex justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                     <Spinner color="gray" size="14" />
@@ -55,10 +55,9 @@
             {:else}
                 <!-- Content that was loading is now displayed -->
                 <div class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" transition:fade|global>
-                    <div
-                        class="pointer-events-none relative w-auto transition-all duration-300 ease-in-out min-[0px]:m-0 min-[0px]:h-full min-[0px]:max-w-none">
+                    <div class="pointer-events-none static w-auto transition-all duration-300 ease-in-out min-[0px]:m-0 min-[0px]:h-full min-[0px]:max-w-none">
                         <div
-                            class="pointer-events-auto relative flex w-full flex-col bg-neutral-100 dark:bg-neutral-900 bg-clip-padding text-neutral-900 dark:text-neutral-100 shadow-4 outline-none min-[0px]:h-full min-[0px]:rounded-none min-[0px]:border-0">
+                            class="pointer-events-auto static flex w-full flex-col bg-neutral-100 dark:bg-neutral-900 bg-clip-padding text-neutral-900 dark:text-neutral-100 shadow-4 outline-none min-[0px]:h-full min-[0px]:rounded-none min-[0px]:border-0">
                             <!-- Dynamically loaded or async-dependent content here -->
 
                             <!-- Modal header -->
@@ -80,14 +79,14 @@
                             </div>
 
                             <!-- Modal body -->
-                            <div class="relative min-[0px]:overflow-y-auto">
-                                <div class="relative isolate">
+                            <div class="static min-[0px]:overflow-y-auto">
+                                <div class="static isolate">
                                     <div class="mx-auto grid grid-cols-1 lg:grid-cols-2">
-                                        <div class="relative px-6 lg:static px-8 py-10">
+                                        <div class="static px-6 lg:static px-8 py-10">
                                             <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg h-screen">
                                                 <h2 class="text-3xl font-bold tracking-tight mb-4">My Digital Business Card</h2>
                                                 <div class="px-10 my-10 space-y-4 text-base leading-7">
-                                                    <a href={fullPath} accesskey="q" title={layoutConfig.vCard.alt} download={layoutConfig.vCard.src}>
+                                                    <a href={fullPath} title={layoutConfig.vCard.alt} download={layoutConfig.vCard.src}>
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{
@@ -106,7 +105,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="relative px-6 lg:static px-8 py-10 border-l border-neutral-300">
+                                        <div class="static px-6 lg:static px-8 py-10 border-l border-neutral-300">
                                             <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
                                                 <h2 class="text-3xl font-bold tracking-tight mb-4">My Contact Details</h2>
                                                 <dl class="px-10 mt-10 space-y-4 text-base leading-7">

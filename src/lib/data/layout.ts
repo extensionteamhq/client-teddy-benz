@@ -91,6 +91,7 @@ interface LayoutConfig {
     vCard: vCard;
     site: SiteInfo;
     logo: Logo;
+    infobanner: SectionVisibility;
     navbar: any; // Any Svelte component
     hero: any; // Any Svelte component
     feature: SectionVisibility;
@@ -191,6 +192,9 @@ const logo: Logo = {
 
 // Import components as needed…
 
+// info banners
+import InfoBanner_01 from '$lib/components/sections/InfoBanner_01.svelte';
+
 // navbars
 import NavBar_01 from '$lib/components/sections/NavBar_01.svelte';
 import NavBar_02 from '$lib/components/sections/NavBar_02.svelte';
@@ -231,6 +235,10 @@ export const layoutConfig: LayoutConfig = {
     vCard,
     site,
     logo,
+    infobanner: {
+        component: InfoBanner_01,
+        visible: true,
+    },
     navbar: NavBar_01,
     hero: Hero_01,
     feature: {

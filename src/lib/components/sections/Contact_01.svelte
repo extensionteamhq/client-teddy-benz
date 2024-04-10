@@ -78,7 +78,7 @@
     }
 </script>
 
-<section id="contact" class="py-8 lg:py-16 my-10 text-center">
+<section id="contact" class="py-8 lg:py-16 my-10 text-center static">
     <div class="flex w-full flex-wrap items-center justify-center px-4 lg:px-12 text-left">
         <div class="text-sm basis-full">
             <p class="text-neutral-900/50 dark:text-neutral-100/50 text-center sr-only">Contact</p>
@@ -87,24 +87,14 @@
             <!-- contact form -->
             <div class="mx-auto grid grid-cols-1">
                 <div class=" px-6 px-8 py-10">
-                    <div class="mx-auto">
-                        <form
-                            action="https://formspree.io/f/mknlbnzq"
-                            method="POST"
-                            class="px-6 lg:px-8 lg:py-10"
-                            on:submit={handleFormSubmit}>
+                    <div class="mx-auto static">
+                        <form action="https://formspree.io/f/mknlbnzq" method="POST" class="static px-6 lg:px-8 lg:py-10" on:submit={handleFormSubmit}>
                             <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-                                <h2 class="text-3xl font-bold tracking-tight mb-4">
-                                    Send Me A Message
-                                </h2>
+                                <h2 class="text-3xl font-bold tracking-tight mb-4">Send Me A Message</h2>
                                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                     <div>
-                                        <label
-                                            for="fname"
-                                            class="block text-sm font-semibold leading-6">
-                                            First name
-                                        </label>
-                                        <div class="mt-2.5 relative h-14">
+                                        <label for="fname" class="block text-sm font-semibold leading-6">First name</label>
+                                        <div class="mt-2.5 static h-14">
                                             <input
                                                 type="text"
                                                 name="fname"
@@ -119,12 +109,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label
-                                            for="lname"
-                                            class="block text-sm font-semibold leading-6">
-                                            Last name
-                                        </label>
-                                        <div class="mt-2.5 relative h-14">
+                                        <label for="lname" class="block text-sm font-semibold leading-6">Last name</label>
+                                        <div class="mt-2.5 static h-14">
                                             <input
                                                 type="text"
                                                 name="lname"
@@ -139,12 +125,8 @@
                                         </div>
                                     </div>
                                     <div class="sm:col-span-2">
-                                        <label
-                                            for="email"
-                                            class="block text-sm font-semibold leading-6">
-                                            Email
-                                        </label>
-                                        <div class="mt-2.5 relative h-14">
+                                        <label for="email" class="block text-sm font-semibold leading-6">Email</label>
+                                        <div class="mt-2.5 static h-14">
                                             <input
                                                 type="email"
                                                 name="email"
@@ -162,12 +144,8 @@
                                         </div>
                                     </div>
                                     <div class="sm:col-span-2">
-                                        <label
-                                            for="phone"
-                                            class="block text-sm font-semibold leading-6">
-                                            Phone number
-                                        </label>
-                                        <div class="mt-2.5 relative h-14">
+                                        <label for="phone" class="block text-sm font-semibold leading-6">Phone number</label>
+                                        <div class="mt-2.5 static h-14">
                                             <input
                                                 type="tel"
                                                 name="phone"
@@ -185,12 +163,8 @@
                                         </div>
                                     </div>
                                     <div class="sm:col-span-2">
-                                        <label
-                                            for="message"
-                                            class="block text-sm font-semibold leading-6">
-                                            Message
-                                        </label>
-                                        <div class="my-2.5 relative h-14">
+                                        <label for="message" class="block text-sm font-semibold leading-6">Message</label>
+                                        <div class="my-2.5 static h-14">
                                             <textarea
                                                 name="message"
                                                 id="message"
@@ -205,12 +179,7 @@
                                     </div>
                                     <div class="hidden sm:col-span-2">
                                         <label for="honeypot">Leave this field blank</label>
-                                        <input
-                                            type="text"
-                                            name="honeypot"
-                                            id="honeypot"
-                                            autocomplete="off"
-                                            bind:value={honeyPot} />
+                                        <input type="text" name="honeypot" id="honeypot" autocomplete="off" bind:value={honeyPot} />
                                     </div>
                                 </div>
                                 <div class="mt-10 flex justify-end">
@@ -223,9 +192,8 @@
             </div>
         {:else}
             <!-- thank you message -->
-            <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-                <div
-                    class="p-5 px-10 leading-8 text-lg rounded-lg ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600">
+            <div class="static px-6 pb-20 pt-24 sm:pt-32 lg:px-8 lg:py-48">
+                <div class="p-5 px-10 leading-8 text-lg rounded-lg ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -240,25 +208,13 @@
                     </svg>
                     <p>Hello {showFirstName}!</p>
                     <p>
-                        A crack team of ninja squirrels has just somersaulted through the internet
-                        jungle to deliver your message directly to my digital doorstep.
+                        A crack team of ninja squirrels has just somersaulted through the internet jungle to deliver your message directly to my digital
+                        doorstep.
                     </p>
-                    <p>
-                        They're currently huddled around it, planning their next mission: crafting a
-                        reply that's nuts in all the right ways.
-                    </p>
-                    <p>
-                        These furry agents are fast, funny, and fur-ociously loyal to the cause of
-                        prompt communication.
-                    </p>
-                    <p>
-                        Expect to hear back from me as soon as they've finished their tiny cups of
-                        acorn espresso.
-                    </p>
-                    <p>
-                        In the meantime, may your day be as delightful as a squirrel with an
-                        unlimited supply of nuts!
-                    </p>
+                    <p>They're currently huddled around it, planning their next mission: crafting a reply that's nuts in all the right ways.</p>
+                    <p>These furry agents are fast, funny, and fur-ociously loyal to the cause of prompt communication.</p>
+                    <p>Expect to hear back from me as soon as they've finished their tiny cups of acorn espresso.</p>
+                    <p>In the meantime, may your day be as delightful as a squirrel with an unlimited supply of nuts!</p>
                     <p>
                         Cheers,
                         <br />

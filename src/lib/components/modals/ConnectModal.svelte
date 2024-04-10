@@ -38,7 +38,11 @@
         isLoading.set(false);
     });
 
+    $: protocol = $page.url.protocol;
     $: hostname = $page.url.hostname;
+    $: port = $page.url.port;
+    $: domain = `${$page.url.protocol}${$page.url.hostname}${$page.url.port ? `:${$page.url.port}` : ''}`;
+    $: fullPath = `${domain}/vcard.vcf`;
 </script>
 
 {#if isOpen}
@@ -87,7 +91,7 @@
                                                         <svg
                                                             class="w-60"
                                                             use:qr={{
-                                                                data: `${hostname}/vcard.vcf`,
+                                                                data: fullPath,
                                                                 logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
                                                                 shape: 'circle',
                                                                 errorCorrectionLevel: 'M',

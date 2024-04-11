@@ -18,11 +18,8 @@
                 <p class="text-lg font-bold mt-3.5 mb-4">Extension Team</p>
                 <p class="font-light mt-3.5 mb-4"
                     >Marketing Solutions To Reach Your Target Audience and Expand Your Brand. They're An Extension To Your Team.</p>
-                <p class="font-light mt-3.5 mb-4"
-                    ><svg
-                        class="h-4 inline-block align-middle mr-2 pb-1 text-neutral-900 dark:text-neutral-100"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
+                <p class="font-light text-sm mt-3.5 mb-4 text-neutral-500 dark:text-neutral-500"
+                    ><svg class="h-4 inline-block align-middle mr-2 pb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/up-right-from-square?f=classic&s=solid - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
                             d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg
                     >Visit Website</p>
@@ -52,11 +49,8 @@
                     ></svg>
                 <p class="text-lg font-bold mt-3.5 mb-4">Solid Close</p>
                 <p class="font-light mt-3.5 mb-4">Top-Tier Transaction Coordination Services for Seasoned Real Estate Investors.</p>
-                <p class="font-light mt-3.5 mb-4"
-                    ><svg
-                        class="h-4 inline-block align-middle mr-2 pb-1 text-neutral-900 dark:text-neutral-100"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
+                <p class="font-light text-sm mt-3.5 mb-4 text-neutral-500 dark:text-neutral-500"
+                    ><svg class="h-4 inline-block align-middle mr-2 pb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/up-right-from-square?f=classic&s=solid - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
                             d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg
                     >Visit Website</p>

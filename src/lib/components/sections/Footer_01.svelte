@@ -15,7 +15,7 @@
 <footer class="flex flex-col items-center text-center">
     <div class="container pt-9">
         <!-- Social media icons container -->
-        <div class="mb-6 flex justify-center space-x-2">
+        <div class="mb-6 flex flex-wrap justify-center space-x-2">
             <!-- facebook -->
             <a
                 href="https://facebook.com/"

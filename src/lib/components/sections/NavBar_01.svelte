@@ -33,7 +33,7 @@
         <!-- navbar -->
         <div class="flex w-full flex-wrap items-center justify-between px-4 py-4">
             <div class="mx-4">
-                <a class="my-1 flex items-center lg:my-0" href="/" on:click|preventDefault={() => handleScroll('home')}>
+                <a class="my-1 flex items-center lg:my-0" href="/" on:click|preventDefault={(e) => handleLinkClick(e, 'home')}>
                     <img class="rounded-lg w-auto h-8 sm:h-14" src={layoutConfig.logo.src} alt={layoutConfig.logo.alt} loading="lazy" />
                     <span class="self-center text-3xl font-semibold whitespace-nowrap text-gray-700 dark:text-gray-50 sr-only">
                         {layoutConfig.site.siteName}

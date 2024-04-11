@@ -48,7 +48,7 @@
         const section = document.getElementById(sectionId);
         if (section) {
             // Smooth scroll to just above the section
-            const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 1;
+            const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 7;
             window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             // Update the browser's URL without navigating
             //window.history.pushState({}, '', '/' + sectionId);

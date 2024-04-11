@@ -5,7 +5,7 @@
     // svelte plugins
     import { getContext } from 'svelte';
     import { form, field } from 'svelte-forms';
-    import { required, email as validEmail } from 'svelte-forms/validators';
+    import { pattern, required, email as validEmail } from 'svelte-forms/validators';
     import { imask } from '@imask/svelte';
     // flowbite plugins
 
@@ -23,6 +23,9 @@
     let isSubmit: boolean = false;
     let honeyPot: string = '';
     let showFirstName: string = '';
+
+    // US Phone number RegEx
+    let phonePattern = [pattern(/^(\([2-9]{3}\)|[2-9]{3})( ?|-|\.)([0-9]{3})( ?|-|\.)[0-9]{4}$/)];
 
     const fname = field('fname', '', [required()]);
     const lname = field('lname', '', [required()]);
@@ -79,115 +82,111 @@
 </script>
 
 <section id="contact" class="py-8 lg:py-16 my-10 text-center relative">
-    <div class="flex w-full flex-wrap items-center justify-center px-4 lg:px-12 text-left">
+    <div class="flex w-full flex-wrap items-center justify-center lg:px-12 text-left">
         <div class="text-sm basis-full">
             <p class="text-neutral-900/50 dark:text-neutral-100/50 text-center sr-only">Contact</p>
         </div>
         {#if !isSubmitForm}
             <!-- contact form -->
-            <div class="mx-auto grid grid-cols-1">
-                <div class=" px-6 px-8 py-10">
-                    <div class="mx-auto relative">
-                        <form action="https://formspree.io/f/mknlbnzq" method="POST" class="relative px-6 lg:px-8 lg:py-10" on:submit={handleFormSubmit}>
-                            <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-                                <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-center">Send A Message</h2>
-                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                                    <div>
-                                        <label for="fname" class="block text-sm font-semibold leading-6">First name</label>
-                                        <div class="mt-2.5 relative h-14">
-                                            <input
-                                                type="text"
-                                                name="fname"
-                                                id="fname"
-                                                autocomplete="given-name"
-                                                class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                                required
-                                                bind:value={$fname.value} />
-                                            {#if $myForm.hasError('fname.required')}
-                                                <ErrorMessage message="First Name is required!" />
-                                            {/if}
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label for="lname" class="block text-sm font-semibold leading-6">Last name</label>
-                                        <div class="mt-2.5 relative h-14">
-                                            <input
-                                                type="text"
-                                                name="lname"
-                                                id="lname"
-                                                autocomplete="family-name"
-                                                class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                                required
-                                                bind:value={$lname.value} />
-                                            {#if $myForm.hasError('lname.required')}
-                                                <ErrorMessage message="Last Name is required!" />
-                                            {/if}
-                                        </div>
-                                    </div>
-                                    <div class="sm:col-span-2">
-                                        <label for="email" class="block text-sm font-semibold leading-6">Email</label>
-                                        <div class="mt-2.5 relative h-14">
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                id="email"
-                                                autocomplete="email"
-                                                class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                                required
-                                                bind:value={$email.value} />
-                                            {#if $myForm.hasError('email.required')}
-                                                <ErrorMessage message="Email is required!" />
-                                            {/if}
-                                            {#if !$myForm.hasError('email.required') && !$email.valid}
-                                                <ErrorMessage message="Email is invalid!" />
-                                            {/if}
-                                        </div>
-                                    </div>
-                                    <div class="sm:col-span-2">
-                                        <label for="phone" class="block text-sm font-semibold leading-6">Phone number</label>
-                                        <div class="mt-2.5 relative h-14">
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                id="phone"
-                                                autocomplete="tel"
-                                                class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                                required
-                                                bind:value={$phone.value}
-                                                use:imask={phoneMask}
-                                                on:accept={accept}
-                                                on:complete={complete} />
-                                            {#if $myForm.hasError('phone.required')}
-                                                <ErrorMessage message="Phone is required!" />
-                                            {/if}
-                                        </div>
-                                    </div>
-                                    <div class="sm:col-span-2">
-                                        <label for="message" class="block text-sm font-semibold leading-6">Message</label>
-                                        <div class="my-2.5 relative h-14">
-                                            <textarea
-                                                name="message"
-                                                id="message"
-                                                rows="3"
-                                                class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                                required
-                                                bind:value={$message.value}></textarea>
-                                            {#if $myForm.hasError('message.required')}
-                                                <ErrorMessage message="Message is required!" />
-                                            {/if}
-                                        </div>
-                                    </div>
-                                    <div class="hidden sm:col-span-2">
-                                        <label for="honeypot">Leave this field blank</label>
-                                        <input type="text" name="honeypot" id="honeypot" autocomplete="off" bind:value={honeyPot} />
-                                    </div>
-                                </div>
-                                <div class="mt-10 flex justify-end">
-                                    <button type="submit" class="">Send message</button>
+            <div class="mx-auto grid grid-flow-col auto-cols-max">
+                <div class="py-10 mx-auto relative">
+                    <form action="https://formspree.io/f/mknlbnzq" method="POST" class="relative" on:submit={handleFormSubmit}>
+                        <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-center">Send A Message</h2>
+                        <div class="grid grid-cols-1 gap-x-2 gap-y-4">
+                            <div>
+                                <label for="fname" class="block text-sm font-semibold leading-6">First name</label>
+                                <div class="mt-2.5 relative h-14">
+                                    <input
+                                        type="text"
+                                        name="fname"
+                                        id="fname"
+                                        autocomplete="given-name"
+                                        class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
+                                        required
+                                        bind:value={$fname.value} />
+                                    {#if $myForm.hasError('fname.required')}
+                                        <ErrorMessage message="First Name is required!" />
+                                    {/if}
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div>
+                                <label for="lname" class="block text-sm font-semibold leading-6">Last name</label>
+                                <div class="mt-2.5 relative h-14">
+                                    <input
+                                        type="text"
+                                        name="lname"
+                                        id="lname"
+                                        autocomplete="family-name"
+                                        class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
+                                        required
+                                        bind:value={$lname.value} />
+                                    {#if $myForm.hasError('lname.required')}
+                                        <ErrorMessage message="Last Name is required!" />
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="email" class="block text-sm font-semibold leading-6">Email</label>
+                                <div class="mt-2.5 relative h-14">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        autocomplete="email"
+                                        class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
+                                        required
+                                        bind:value={$email.value} />
+                                    {#if $myForm.hasError('email.required')}
+                                        <ErrorMessage message="Email is required!" />
+                                    {/if}
+                                    {#if !$myForm.hasError('email.required') && !$email.valid}
+                                        <ErrorMessage message="Email is invalid!" />
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="phone" class="block text-sm font-semibold leading-6">Phone number</label>
+                                <div class="mt-2.5 relative h-14">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        autocomplete="tel"
+                                        class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
+                                        required
+                                        bind:value={$phone.value}
+                                        use:imask={inputPhone}
+                                        on:accept={accept}
+                                        on:complete={complete} />
+                                    {#if $myForm.hasError('phone.required')}
+                                        <ErrorMessage message="Phone is required!" />
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-semibold leading-6">Message</label>
+                                <div class="my-2.5 relative h-14">
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        rows="3"
+                                        class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
+                                        required
+                                        bind:value={$message.value}></textarea>
+                                    {#if $myForm.hasError('message.required')}
+                                        <ErrorMessage message="Message is required!" />
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="hidden sm:col-span-2">
+                                <label for="honeypot">Leave this field blank</label>
+                                <input type="text" name="honeypot" id="honeypot" autocomplete="off" bind:value={honeyPot} />
+                            </div>
+                        </div>
+                        <div class="mt-10 flex justify-end">
+                            <button type="submit" class="">Send message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         {:else}

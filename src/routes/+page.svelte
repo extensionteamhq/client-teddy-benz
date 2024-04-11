@@ -5,27 +5,30 @@
     import { Modals, closeModal, openModal } from 'svelte-modals';
     // flowbite plugins
 
+    // tw-element plugins
+    // import { Collapse, Modal, Tooltip } from 'tw-elements';
+
     // node modules
 
     // local
     import { layoutConfig } from '../lib/data/layout';
 
-    onMount(async () => {
-        const { Collapse, Modal, Tooltip, initTWE } = await import('tw-elements');
-        initTWE({ Collapse, Modal, Tooltip });
-    });
+    // onMount(async () => {
+    //     const { Collapse, Modal, Tooltip, initTWE } = await import('tw-elements');
+    //     initTWE({ Collapse, Modal, Tooltip });
+    // });
 </script>
 
 <svelte:head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Homepage</title>
-    <meta property="og:title" content="" />
+    <title>{layoutConfig.site.siteName} | Homepage</title>
+    <meta property="og:title" content="{layoutConfig.site.siteName} | Homepage" />
     <meta name="description" content="" />
     <meta property="og:description" content="" />
-    <meta name="author" content="" />
-    <meta property="og:image" content="" />
+    <meta name="author" content={layoutConfig.site.fullName} />
+    <meta property="og:image" content={layoutConfig.logo.src} />
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
     <script type="application/ld+json">

@@ -58,8 +58,7 @@
                         href="/vcard.vcf"
                         title="Digital Business Card"
                         type="button"
-                        class="self-center block my-auto rounded-md bg-transparent p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0"
-                        data-twe-ripple-init>
+                        class="self-center block my-auto rounded-md bg-transparent p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0">
                         <span class="[&>svg]:h-10 [&>svg]:w-10">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                                 <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/download?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

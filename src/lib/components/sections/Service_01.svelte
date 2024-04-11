@@ -61,7 +61,7 @@
         </div>
     </div>
     <div class="text-center w-full">
-        <button type="button" data-twe-ripple-init class="mt-10 mx-4" on:click={handleConnect}>
+        <button type="button" class="mt-10 mx-4" on:click={handleConnect}>
             Let's Connect
             <svg class="w-5 h-5 ml-2 -mr-1 hidden md:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path

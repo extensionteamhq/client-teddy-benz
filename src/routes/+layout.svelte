@@ -19,6 +19,7 @@
     import CalendlyModal from '$lib/components/modals/CalendlyModal.svelte';
     import ContactModal from '$lib/components/modals/ContactModal.svelte';
     import ConnectModal from '$lib/components/modals/ConnectModal.svelte';
+
     // Function to open Calendly Modal
     function handleCalendly(): void {
         openModal(CalendlyModal, {
@@ -27,6 +28,7 @@
             },
         });
     }
+
     // Function to open Contact Modal
     function handleContact(): void {
         openModal(ContactModal, {
@@ -35,6 +37,7 @@
             },
         });
     }
+
     // Function to open Connect Modal
     function handleConnect(): void {
         openModal(ConnectModal, {
@@ -43,6 +46,7 @@
             },
         });
     }
+
     // Function to scroll to a section by ID
     function handleScroll(sectionId: string): void {
         const section = document.getElementById(sectionId);
@@ -54,6 +58,7 @@
             //window.history.pushState({}, '', '/' + sectionId);
         }
     }
+
     // Use setContext to provide these functions to all child components
     setContext('handleCalendly', handleCalendly);
     setContext('handleContact', handleContact);
@@ -86,9 +91,9 @@
 {:else}
     <!-- For all other cases, render the default layout components -->
     <!-- navbar -->
-    <svelte:component this={layoutConfig.navbar} {handleCalendly} {handleContact} {handleConnect} />
+    <svelte:component this={layoutConfig.navbar} {handleConnect} />
     <!-- body -->
-    <slot {handleCalendly} {handleContact} {handleConnect} />
+    <slot {handleConnect} />
     <!-- footer -->
     <svelte:component this={layoutConfig.footer} />
 {/if}

@@ -2,7 +2,7 @@
 const colors = require('tailwindcss/colors');
 
 export default {
-    content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}', './node_modules/tw-elements/js/**/*.js'],
+    content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'],
     theme: {
         extend: {
             // screens: {},
@@ -37,6 +37,6 @@ export default {
             center: true,
         },
     },
-    plugins: [require('flowbite/plugin'), require('@tailwindcss/aspect-ratio'), require('tw-elements/plugin.cjs')],
+    plugins: [require('flowbite/plugin'), require('@tailwindcss/aspect-ratio')],
     darkMode: 'class',
 };

@@ -212,7 +212,7 @@
                             <!-- Modal footer -->
                             <div
                                 class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end border-t-2 border-neutral-300 py-0 px-4 dark:border-neutral-600 min-[0px]:rounded-none">
-                                <button type="button" class="" data-twe-modal-dismiss on:click={closeModal}>Close</button>
+                                <button type="button" class="" on:click={closeModal}>Close</button>
                             </div>
                         </div>
                     </div>

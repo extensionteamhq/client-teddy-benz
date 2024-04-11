@@ -21,8 +21,7 @@
                 href="https://facebook.com/"
                 title="Facebook"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="[&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/facebook-f?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -36,8 +35,7 @@
                 href="https://twitter.com/"
                 title="X-Twitter"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/x-twitter?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -51,8 +49,7 @@
                 href="https://linkedin.com/"
                 title="LinkedIn"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/linkedin-in?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -66,8 +63,7 @@
                 href="https://instagram.com/"
                 title="Instagram"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/instagram?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -81,8 +77,7 @@
                 href="https://youtube.com/"
                 title="YouTube"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/youtube?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -96,8 +91,7 @@
                 href="https://tiktok.com/"
                 title="TikTok"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/tiktok?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -111,8 +105,7 @@
                 href="https://discord.com/"
                 title="Discord"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 640 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/discord?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -126,8 +119,7 @@
                 href="https://whatsapp.com/"
                 title="Whatsapp"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/whatsapp?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -141,8 +133,7 @@
                 href="https://messenger.com/"
                 title="Facebook Messenger"
                 type="button"
-                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0"
-                data-twe-ripple-init>
+                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/facebook-messenger?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

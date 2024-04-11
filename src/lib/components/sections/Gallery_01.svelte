@@ -1,3 +1,21 @@
+<script lang="ts">
+    // svelte core
+
+    // svelte plugins
+
+    // flowbite plugins
+
+    // tw-element plugins
+
+    // node modules
+
+    // local
+
+    // initialize
+
+    // open (will be a child of the target element above)
+</script>
+
 <section class="py-8 lg:py-16 my-10 text-center" id="gallery">
     <div class="py-4 px-4 mx-auto max-w-screen-xl sm:text-center">
         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">Gallery</h2>

@@ -41,17 +41,10 @@
                 </a>
             </div>
             <!-- Hamburger button for mobile view -->
-            <button
-                class="hamburger"
-                type="button"
-                data-twe-collapse-init
-                data-twe-target="#navbarSupportedContent4"
-                aria-controls="navbarSupportedContent4"
-                aria-expanded="false"
-                aria-label="Toggle Navigation">
+            <button class="hamburger" type="button" data-collapse-toggle="navbar-hamburger" aria-controls="navbar-hamburger" aria-expanded="false">
                 <!-- Hamburger icon -->
                 <span class="[&>svg]:w-8 [&>svg]:stroke-neutral-900 dark:[&>svg]:stroke-neutral-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             fill-rule="evenodd"
                             d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
@@ -60,60 +53,36 @@
                 </span>
             </button>
             <!-- Collapsible navbar container -->
-            <div
-                class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto"
-                id="navbarSupportedContent4"
-                data-twe-collapse-item>
+            <div class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto" id="navbar-hamburger">
                 <!-- Left links -->
-                <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row text-center lg:text-left" data-twe-navbar-nav-ref>
+                <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row text-center lg:text-left">
                     <!-- Home link -->
-                    <!-- <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
-                        <a class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400" aria-current="page" href="/" data-twe-nav-link-ref on:click|preventDefault={() => handleScroll('home')}>Home</a>
+                    <!-- <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
+                        <a class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400" aria-current="page" href="/" on:click|preventDefault={() => handleScroll('home')}>Home</a>
                     </li> -->
                     <!-- Services Link -->
-                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
+                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
                         <a
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#services"
-                            data-twe-nav-link-ref
-                            data-twe-collapse-init
-                            data-twe-target="#navbarSupportedContent4"
-                            aria-controls="navbarSupportedContent4"
-                            aria-expanded="false"
-                            data-twe-toggle="true"
-                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'services')}>
                             Services
                         </a>
                     </li>
                     <!-- About Link -->
-                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
+                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
                         <a
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#about"
-                            data-twe-nav-link-ref
-                            data-twe-collapse-init
-                            data-twe-target="#navbarSupportedContent4"
-                            aria-controls="navbarSupportedContent4"
-                            aria-expanded="false"
-                            data-twe-toggle="true"
-                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'about')}>
                             About
                         </a>
                     </li>
                     <!-- Contact Link -->
-                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
+                    <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
                         <a
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#contact"
-                            data-twe-nav-link-ref
-                            data-twe-collapse-init
-                            data-twe-target="#navbarSupportedContent4"
-                            aria-controls="navbarSupportedContent4"
-                            aria-expanded="false"
-                            data-twe-toggle="true"
-                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'contact')}>
                             Contact
                         </a>
@@ -122,8 +91,6 @@
                 <div class="flex items-center">
                     <button
                         type="button"
-                        data-twe-toggle="modal"
-                        data-twe-ripple-init
                         class="!hidden lg:!inline-flex items-center px-5 py-3 mt-4 mb-8 lg:m-0 lg:mr-4 text-base text-center rounded-lg"
                         on:click={handleConnect}>
                         Let's Connect

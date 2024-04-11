@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,1000,700,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,1000,700,900&display=swap');
 
 @tailwind base;
 
@@ -25,7 +25,7 @@ body {
 
 p {
     @apply leading-6;
-    @apply my-6;
+    @apply mb-6;
 }
 
 /* buttons */
@@ -57,9 +57,7 @@ button {
 }
 
 button.secondary {
-    @apply 
-    
-    text-neutral-900 
+    @apply text-neutral-900 
     disabled:text-neutral-900 
     dark:text-neutral-100 
     dark:disabled:text-neutral-100 
@@ -80,9 +78,7 @@ button.secondary {
 
 button.hamburger,
 button.closeModal {
-    @apply 
-
-    block !border-0 px-0 pr-4 py-0 m-0 mt-2 text-base items-center text-center rounded-none shadow-none hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:!outline-none focus-visible:!outline-none active:!outline-none !transition-none duration-300 ease-in cursor-pointer disabled:opacity-100 lg:!hidden
+    @apply block !border-0 px-0 pr-4 py-0 m-0 mt-2 text-base items-center text-center rounded-none shadow-none hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:!outline-none focus-visible:!outline-none active:!outline-none !transition-none duration-300 ease-in cursor-pointer disabled:opacity-100 lg:!hidden
 
     focus:!ring-0
     disabled:focus:!ring-0
@@ -113,8 +109,7 @@ button.closeModal {
 }
 
 button.mode {
-    @apply 
-    transition-all duration-300 ease-in cursor-pointer
+    @apply transition-all duration-300 ease-in cursor-pointer
 
     focus:!outline-none
     disabled:focus:!outline-none
@@ -165,7 +160,7 @@ button.mode {
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0,0,0,0.100);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .modal {
@@ -213,7 +208,7 @@ button.mode {
 .close:after {
     position: absolute;
     left: 15px;
-    content: " ";
+    content: ' ';
     height: 33px;
     width: 2px;
     background-color: #fff;

@@ -1,6 +1,6 @@
 <script lang="ts">
     // svelte core
-
+    import { onMount } from 'svelte';
     // svelte plugins
     import { Modals, closeModal, openModal } from 'svelte-modals';
     // flowbite plugins
@@ -9,6 +9,11 @@
 
     // local
     import { layoutConfig } from '../lib/data/layout';
+
+    onMount(async () => {
+        const { Collapse, Modal, Tooltip, initTWE } = await import('tw-elements');
+        initTWE({ Collapse, Modal, Tooltip });
+    });
 </script>
 
 <svelte:head>

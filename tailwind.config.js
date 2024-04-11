@@ -37,6 +37,6 @@ export default {
             center: true,
         },
     },
-    plugins: [require('flowbite/plugin'), require('@tailwindcss/aspect-ratio')],
+    plugins: [require('flowbite/plugin'), require('@tailwindcss/aspect-ratio'), require('tw-elements/plugin.cjs')],
     darkMode: 'class',
 };

@@ -29,7 +29,7 @@
                             blanditiis ratione.
                         </p>
                         <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 lg:max-w-none">
-                            <div class="static px-2">
+                            <div class="relative px-2">
                                 <p class="inline font-semibold">
                                     <svg class="inline-block w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -45,7 +45,7 @@
                                     blanditiis ratione.
                                 </p>
                             </div>
-                            <div class="static px-2">
+                            <div class="relative px-2">
                                 <p class="inline font-semibold">
                                     <svg class="inline-block w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -59,7 +59,7 @@
                                 </p>
                                 <p class="inline font-normal">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
                             </div>
-                            <div class="static px-2">
+                            <div class="relative px-2">
                                 <p class="inline font-semibold">
                                     <svg class="inline-block w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -75,7 +75,7 @@
                                 </p>
                                 <p class="inline font-normal">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
                             </div>
-                            <div class="static px-2">
+                            <div class="relative px-2">
                                 <p class="inline font-semibold">
                                     <svg class="inline-block w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path

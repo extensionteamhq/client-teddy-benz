@@ -1,7 +1,7 @@
 <!-- //////////////////////////////////////////////
      WARNING: THIS IS CURRENTLY A WORK IN PROGRESS! 
      //////////////////////////////////////////////-->
-<section class="static">
+<section class="relative">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="gap-16 justify-between items-center p-6 text-white bg-gray-900 rounded-lg dark:bg-gray-800 lg:flex lg:gap-24 md:p-12">
             <div class="w-full">
@@ -12,7 +12,7 @@
             <div class="mt-6 w-full lg:mt-0">
                 <form action="#">
                     <div class="items-center mb-3 space-y-4 sm:flex sm:space-y-0">
-                        <div class="static w-full">
+                        <div class="relative w-full">
                             <label for="member_email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"

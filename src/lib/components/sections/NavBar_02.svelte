@@ -22,7 +22,7 @@
 <!-- //////////////////////////////////////////////
      WARNING: THIS IS CURRENTLY A WORK IN PROGRESS! 
      //////////////////////////////////////////////-->
-<header class="static px-10">
+<header class="relative px-10">
     <Navbar let:NavContainer class="fixed w-full px-2 sm:px-4 py-0 z-20 top-0 start-0" aria-label="Global">
         <NavContainer class="px-9 sm:px-0 py-2 border-b border-gray-500/20">
             <NavBrand href="/">

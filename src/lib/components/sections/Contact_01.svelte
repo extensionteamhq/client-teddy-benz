@@ -78,7 +78,7 @@
     }
 </script>
 
-<section id="contact" class="py-8 lg:py-16 my-10 text-center static">
+<section id="contact" class="py-8 lg:py-16 my-10 text-center relative">
     <div class="flex w-full flex-wrap items-center justify-center px-4 lg:px-12 text-left">
         <div class="text-sm basis-full">
             <p class="text-neutral-900/50 dark:text-neutral-100/50 text-center sr-only">Contact</p>
@@ -87,14 +87,14 @@
             <!-- contact form -->
             <div class="mx-auto grid grid-cols-1">
                 <div class=" px-6 px-8 py-10">
-                    <div class="mx-auto static">
-                        <form action="https://formspree.io/f/mknlbnzq" method="POST" class="static px-6 lg:px-8 lg:py-10" on:submit={handleFormSubmit}>
+                    <div class="mx-auto relative">
+                        <form action="https://formspree.io/f/mknlbnzq" method="POST" class="relative px-6 lg:px-8 lg:py-10" on:submit={handleFormSubmit}>
                             <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                                 <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-center">Send A Message</h2>
                                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                     <div>
                                         <label for="fname" class="block text-sm font-semibold leading-6">First name</label>
-                                        <div class="mt-2.5 static h-14">
+                                        <div class="mt-2.5 relative h-14">
                                             <input
                                                 type="text"
                                                 name="fname"
@@ -110,7 +110,7 @@
                                     </div>
                                     <div>
                                         <label for="lname" class="block text-sm font-semibold leading-6">Last name</label>
-                                        <div class="mt-2.5 static h-14">
+                                        <div class="mt-2.5 relative h-14">
                                             <input
                                                 type="text"
                                                 name="lname"
@@ -126,7 +126,7 @@
                                     </div>
                                     <div class="sm:col-span-2">
                                         <label for="email" class="block text-sm font-semibold leading-6">Email</label>
-                                        <div class="mt-2.5 static h-14">
+                                        <div class="mt-2.5 relative h-14">
                                             <input
                                                 type="email"
                                                 name="email"
@@ -145,7 +145,7 @@
                                     </div>
                                     <div class="sm:col-span-2">
                                         <label for="phone" class="block text-sm font-semibold leading-6">Phone number</label>
-                                        <div class="mt-2.5 static h-14">
+                                        <div class="mt-2.5 relative h-14">
                                             <input
                                                 type="tel"
                                                 name="phone"
@@ -164,7 +164,7 @@
                                     </div>
                                     <div class="sm:col-span-2">
                                         <label for="message" class="block text-sm font-semibold leading-6">Message</label>
-                                        <div class="my-2.5 static h-14">
+                                        <div class="my-2.5 relative h-14">
                                             <textarea
                                                 name="message"
                                                 id="message"
@@ -192,7 +192,7 @@
             </div>
         {:else}
             <!-- thank you message -->
-            <div class="static px-6 pb-20 pt-24 sm:pt-32 lg:px-8 lg:py-48">
+            <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:px-8 lg:py-48">
                 <div class="p-5 px-10 leading-8 text-lg rounded-lg ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

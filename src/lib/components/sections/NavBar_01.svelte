@@ -16,15 +16,12 @@
     const handleConnect = getContext<() => void>('handleConnect');
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
 
-  
-
-    function handleLinkClick(e: MouseEvent, sectionId:string) {
-        handleScroll(sectionId)
+    function handleLinkClick(e: MouseEvent, sectionId: string) {
+        handleScroll(sectionId);
     }
-
 </script>
 
-<header class="z-100">
+<header class="z-50 absolute top-0 left-0 right-0">
     <!-- Main navigation container -->
     <nav
         class="fixed top-0 flex w-full flex-wrap items-center justify-between shadow-dark-mild text-neutral-900 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900"
@@ -64,7 +61,7 @@
             </button>
             <!-- Collapsible navbar container -->
             <div
-                class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto "
+                class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto"
                 id="navbarSupportedContent4"
                 data-twe-collapse-item>
                 <!-- Left links -->

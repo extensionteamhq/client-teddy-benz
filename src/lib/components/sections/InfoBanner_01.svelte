@@ -29,7 +29,7 @@
             <a
                 href="https://instagram.com/{layoutConfig.site.socialHandle_04}"
                 target="_blank"
-                class="border p-0.5 mx-0.5 whitespace-nowrap rounded text-neutral-900 bg-neutral-300 hover:text-neutral-100 hover:bg-neutral-900 dark:hover:text-neutral-900 dark:hover:bg-neutral-100"
+                class="border p-0.5 mx-0.5 pr-1 whitespace-nowrap rounded text-neutral-900 bg-neutral-300 hover:text-neutral-100 hover:bg-neutral-900 dark:hover:text-neutral-900 dark:hover:bg-neutral-100"
                 ><span class=" [&>svg]:h-5 [&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="inline-block pb-0.5">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/instagram?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->

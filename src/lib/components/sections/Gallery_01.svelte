@@ -5,8 +5,6 @@
 
     // flowbite plugins
 
-    // tw-element plugins
-
     // node modules
 
     // local

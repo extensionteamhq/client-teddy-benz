@@ -1,22 +1,16 @@
 <script lang="ts">
     // @ts-nocheck
     // svelte core
-    import { onMount } from 'svelte';
+
     // svelte plugins
-    import { getContext } from 'svelte';
     import { form, field } from 'svelte-forms';
     import { pattern, required, email as validEmail } from 'svelte-forms/validators';
     import { imask } from '@imask/svelte';
-    // flowbite plugins
-
-    // other plugins
-    import { qr } from '@svelte-put/qr/svg';
-    // node modules
+    // other plugins and modules
 
     // local
     import { layoutConfig } from '../../data/layout';
     import ErrorMessage from '$lib/utils/ErrorMessage.svelte';
-    import ContactSection from '$lib/components/sections/Contact_01.svelte';
 
     let inputPhone: any;
     let isSubmitForm: boolean = false;

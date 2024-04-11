@@ -279,7 +279,7 @@ export const layoutConfig: LayoutConfig = {
     },
     newsletter: {
         component: Newsletter_01,
-        visible: false,
+        visible: true,
     },
     contact: {
         component: Contact_01,

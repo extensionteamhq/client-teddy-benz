@@ -19,17 +19,7 @@
   
 
     function handleLinkClick(e: MouseEvent, sectionId:string) {
-        const target = e.target as HTMLAnchorElement;
-        const navbarContainer = document.getElementById('navbarSupportedContent4');
-        const navbarButton = document.querySelector('.hamburger');
         handleScroll(sectionId)
-        if (target.hasAttribute('data-twe-nav-link-ref')) {
-            navbarContainer?.classList.add('hidden');
-            navbarContainer?.classList.add('fade-out');
-            navbarContainer?.removeAttribute('data-twe-collapse-show')
-            navbarButton?.setAttribute('aria-expanded', 'false');
-            navbarButton?.setAttribute('data-twe-collapse-collapsed', '');
-        }
     }
 
 </script>
@@ -74,7 +64,7 @@
             </button>
             <!-- Collapsible navbar container -->
             <div
-                class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto"
+                class="!visible hidden flex-grow basis-[100%] items-center mt-2 lg:mt-0 lg:!flex lg:basis-auto "
                 id="navbarSupportedContent4"
                 data-twe-collapse-item>
                 <!-- Left links -->
@@ -89,6 +79,12 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#services"
                             data-twe-nav-link-ref
+                            data-twe-collapse-init
+                            data-twe-target="#navbarSupportedContent4"
+                            aria-controls="navbarSupportedContent4"
+                            aria-expanded="false"
+                            data-twe-toggle="true"
+                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'services')}>
                             Services
                         </a>
@@ -99,6 +95,12 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#about"
                             data-twe-nav-link-ref
+                            data-twe-collapse-init
+                            data-twe-target="#navbarSupportedContent4"
+                            aria-controls="navbarSupportedContent4"
+                            aria-expanded="false"
+                            data-twe-toggle="true"
+                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'about')}>
                             About
                         </a>
@@ -109,6 +111,12 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#contact"
                             data-twe-nav-link-ref
+                            data-twe-collapse-init
+                            data-twe-target="#navbarSupportedContent4"
+                            aria-controls="navbarSupportedContent4"
+                            aria-expanded="false"
+                            data-twe-toggle="true"
+                            aria-label="Toggle Navigation"
                             on:click|preventDefault={(e) => handleLinkClick(e, 'contact')}>
                             Contact
                         </a>

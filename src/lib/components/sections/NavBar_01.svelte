@@ -15,6 +15,23 @@
     const handleContact = getContext<() => void>('handleContact');
     const handleConnect = getContext<() => void>('handleConnect');
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
+
+  
+
+    function handleLinkClick(e: MouseEvent, sectionId:string) {
+        const target = e.target as HTMLAnchorElement;
+        const navbarContainer = document.getElementById('navbarSupportedContent4');
+        const navbarButton = document.querySelector('.hamburger');
+        handleScroll(sectionId)
+        if (target.hasAttribute('data-twe-nav-link-ref')) {
+            navbarContainer?.classList.add('hidden');
+            navbarContainer?.classList.add('fade-out');
+            navbarContainer?.removeAttribute('data-twe-collapse-show')
+            navbarButton?.setAttribute('aria-expanded', 'false');
+            navbarButton?.setAttribute('data-twe-collapse-collapsed', '');
+        }
+    }
+
 </script>
 
 <header class="z-100">
@@ -72,7 +89,7 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#services"
                             data-twe-nav-link-ref
-                            on:click|preventDefault={() => handleScroll('services')}>
+                            on:click|preventDefault={(e) => handleLinkClick(e, 'services')}>
                             Services
                         </a>
                     </li>
@@ -82,7 +99,7 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#about"
                             data-twe-nav-link-ref
-                            on:click|preventDefault={() => handleScroll('about')}>
+                            on:click|preventDefault={(e) => handleLinkClick(e, 'about')}>
                             About
                         </a>
                     </li>
@@ -92,7 +109,7 @@
                             class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
                             href="/#contact"
                             data-twe-nav-link-ref
-                            on:click|preventDefault={() => handleScroll('contact')}>
+                            on:click|preventDefault={(e) => handleLinkClick(e, 'contact')}>
                             Contact
                         </a>
                     </li>

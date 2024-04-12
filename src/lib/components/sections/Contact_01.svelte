@@ -24,7 +24,7 @@
     const fname = field('fname', '', [required()]);
     const lname = field('lname', '', [required()]);
     const email = field('email', '', [required(), validEmail()]);
-    const phone = field('phone', '', [required()]);
+    const phone = field('phone', '', [required(), ...phonePattern]);
     const message = field('message', '', [required()]);
     const myForm = form(fname, lname, email, phone, message);
 
@@ -39,6 +39,8 @@
             if (valid) {
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
+
+                return
                 // sends to brandedsites@extension.team
                 const req = await fetch('https://formspree.io/f/xleqonkk', {
                     method: 'POST',
@@ -61,18 +63,6 @@
             console.log(error);
         }
     };
-
-    const phoneMask = {
-        mask: '+{1} (000) 000-0000',
-    };
-
-    function accept({ detail: imask }) {
-        console.log('accepted', imask);
-    }
-
-    function complete({ detail: imask }) {
-        console.log('completed', imask);
-    }
 </script>
 
 <section id="contact" class="py-8 lg:py-16 my-10 text-center relative">
@@ -149,12 +139,14 @@
                                         class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
                                         required
                                         bind:value={$phone.value}
-                                        use:imask={inputPhone}
-                                        on:accept={accept}
-                                        on:complete={complete} />
+                                        />
                                     {#if $myForm.hasError('phone.required')}
                                         <ErrorMessage message="Phone is required!" />
                                     {/if}
+                                    {#if $myForm.hasError('phone.pattern')}
+                                        <ErrorMessage message="Phone is must be valid!" />
+                                    {/if}
+                                    <!-- use:imask={{ mask: '+{1} (000) 000-0000'}} -->
                                 </div>
                             </div>
                             <div class="sm:col-span-2">

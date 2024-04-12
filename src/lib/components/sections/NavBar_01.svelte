@@ -16,8 +16,19 @@
     const handleConnect = getContext<() => void>('handleConnect');
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
 
-    function handleLinkClick(e: MouseEvent, sectionId: string) {
-        handleScroll(sectionId);
+    function handleLinkClick(e: MouseEvent, sectionId:string) {
+        const navbarContainer = document.getElementById('navbar-hamburger');
+        const navbarButton = document.querySelector('.hamburger');
+        handleScroll(sectionId)
+        navbarContainer?.classList.add('hidden');
+        navbarButton?.setAttribute('aria-expanded', 'false');
+    }
+
+    function handleNavMenu(){
+        const navbarContainer = document.getElementById('navbar-hamburger');
+        const navbarButton = document.querySelector('.hamburger');
+        navbarContainer?.classList.remove('hidden');
+        navbarButton?.setAttribute('aria-expanded', 'true');
     }
 </script>
 
@@ -41,7 +52,7 @@
                 </a>
             </div>
             <!-- Hamburger button for mobile view -->
-            <button class="hamburger" type="button" data-collapse-toggle="navbar-hamburger" aria-controls="navbar-hamburger" aria-expanded="false">
+            <button on:click={handleNavMenu} class="hamburger" type="button" data-collapse-toggle="navbar-hamburger" aria-controls="navbar-hamburger" aria-expanded="false">
                 <!-- Hamburger icon -->
                 <span class="[&>svg]:w-8 [&>svg]:stroke-neutral-900 dark:[&>svg]:stroke-neutral-100">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

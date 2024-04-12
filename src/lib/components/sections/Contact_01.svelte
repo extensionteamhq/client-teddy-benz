@@ -19,7 +19,7 @@
     let showFirstName: string = '';
 
     // US Phone number RegEx
-    let phonePattern = [pattern(/^(\([2-9]{3}\)|[2-9]{3})( ?|-|\.)([0-9]{3})( ?|-|\.)[0-9]{4}$/)];
+    let phonePattern = [pattern(/^(\([2-9]{1}[0-9]{2}\)|([2-9]{1}[0-9]{2}))( ?|-|\.)([0-9]{3})( ?|-|\.)[0-9]{4}$/)];
 
     const fname = field('fname', '', [required()]);
     const lname = field('lname', '', [required()]);
@@ -73,7 +73,7 @@
             <!-- contact form -->
             <div class="mx-auto grid grid-flow-col auto-cols-max">
                 <div class="py-10 mx-auto relative">
-                    <form action="https://formspree.io/f/mknlbnzq" method="POST" class="relative" on:submit={handleFormSubmit}>
+                    <form action="/" method="POST" class="relative" on:submit={handleFormSubmit}>
                         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-center">Send A Message</h2>
                         <div class="grid grid-cols-1 gap-x-2 gap-y-4">
                             <div>
@@ -137,13 +137,12 @@
                                         autocomplete="tel"
                                         class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-neutral-300 dark:ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 dark:focus:ring-neutral-300 sm:text-sm sm:leading-6 bg-neutral-300 dark:bg-neutral-600"
                                         required
-                                        bind:value={$phone.value}
-                                        />
+                                        bind:value={$phone.value} />
                                     {#if $myForm.hasError('phone.required')}
                                         <ErrorMessage message="Phone is required!" />
                                     {/if}
                                     {#if $myForm.hasError('phone.pattern')}
-                                        <ErrorMessage message="Phone is must be valid!" />
+                                        <ErrorMessage message="Phone must be valid (e.g., 000-000-0000)!" />
                                     {/if}
                                     <!-- use:imask={{ mask: '+{1} (000) 000-0000'}} -->
                                 </div>

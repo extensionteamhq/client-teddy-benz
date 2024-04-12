@@ -40,7 +40,6 @@
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
 
-                return
                 // sends to brandedsites@extension.team
                 const req = await fetch('https://formspree.io/f/xleqonkk', {
                     method: 'POST',

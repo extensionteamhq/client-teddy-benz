@@ -15,7 +15,7 @@
 </script>
 
 <section class="py-8 lg:py-16 my-10 text-center" id="gallery">
-    <div class="py-4 px-4 mx-auto max-w-screen-xl sm:text-center">
+    <div class="w-full max-w-screen-2xl mx-auto py-4 px-8 sm:text-center">
         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">Gallery</h2>
         <p class="sm:text-xl text-center">Some of the amazing places we can go to.</p>
         <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">

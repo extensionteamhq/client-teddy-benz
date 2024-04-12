@@ -20,6 +20,7 @@
             <a
                 href="https://facebook.com/"
                 title="Facebook"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="[&>svg]:h-5 [&>svg]:w-5">
@@ -34,6 +35,7 @@
             <a
                 href="https://twitter.com/"
                 title="X-Twitter"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -48,6 +50,7 @@
             <a
                 href="https://linkedin.com/"
                 title="LinkedIn"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -62,6 +65,7 @@
             <a
                 href="https://instagram.com/"
                 title="Instagram"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -76,6 +80,7 @@
             <a
                 href="https://youtube.com/"
                 title="YouTube"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -90,6 +95,7 @@
             <a
                 href="https://tiktok.com/"
                 title="TikTok"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -104,6 +110,7 @@
             <a
                 href="https://discord.com/"
                 title="Discord"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -118,6 +125,7 @@
             <a
                 href="https://whatsapp.com/"
                 title="Whatsapp"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -132,6 +140,7 @@
             <a
                 href="https://messenger.com/"
                 title="Facebook Messenger"
+                target="_blank"
                 type="button"
                 class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -149,9 +158,9 @@
     <div class="w-full bg-neutral-100 dark:bg-neutral-900 text-center">
         <FooterCopyright spanClass="block text-sm sm:text-center" href="/" by={layoutConfig.site.siteName} />
         <div class="sm:text-center">
-            <p class="text-sm" data-svelte-h="svelte-3a4mgq">
+            <p class="text-sm leading-8">
                 Handcrafted with
-                <span class="mx-auto [&>svg]:h-4 [&>svg]:w-4 text-red-600 inline-block align-top">
+                <span class="mx-auto [&>svg]:h-4 [&>svg]:w-4 text-red-600 inline-block align-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/heart?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path
@@ -160,7 +169,7 @@
                 </span>
                 by
                 <a href="https://extension.team/" title="Get your own site from Extension Team." target="_blank" class="hover:text-[#ffcb31]">
-                    <span class="mx-auto [&>svg]:h-6 [&>svg]:w-auto inline-block align-top -mt-1 pr-0.5">
+                    <span class="mx-auto [&>svg]:h-6 [&>svg]:w-auto inline-block align-middle -mt-1 pr-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 779.5 779.5" xml:space="preserve">
                             <path
                                 fill="#FFCB31"

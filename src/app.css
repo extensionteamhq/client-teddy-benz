@@ -124,6 +124,7 @@ button.mode {
     hover:!bg-neutral-300
     dark:hover:!bg-neutral-600;
 }
+
 /* button.colormode {
     @apply !rounded-lg !text-xs !p-2.5 !fixed bottom-2 right-2 shadow-none transition-none
 
@@ -152,6 +153,12 @@ button.mode {
     dark:hover:!bg-transparent 
     dark:disabled:hover:!bg-transparent;
 } */
+
+/* forms */
+input,
+textarea {
+    @apply block w-full !rounded-md !border-0 px-3.5 py-2 !shadow-sm !ring-1 ring-inset !ring-neutral-300 dark:!ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:!ring-neutral-600 dark:focus:!ring-neutral-300 sm:text-sm sm:leading-6 !bg-neutral-300 dark:!bg-neutral-600;
+}
 
 /* modals */
 .backdrop {

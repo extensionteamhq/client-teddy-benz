@@ -52,7 +52,7 @@
 </svelte:head>
 
 <!-- The `container` class sets the max-width of an element to match the min-width of the current breakpoint. This is useful if you’d prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport. -->
-<main class="my-24 mx-auto px-8" id="home">
+<main class="mt-24 mx-auto" id="home">
     <!-- hero -->
     <svelte:component this={layoutConfig.hero} />
 
@@ -81,9 +81,9 @@
         <svelte:component this={layoutConfig.cta.component} />
     {/if}
 
-    <!-- sponsors -->
-    {#if layoutConfig.sponsors.visible}
-        <svelte:component this={layoutConfig.sponsors.component} />
+    <!-- newsletter -->
+    {#if layoutConfig.newsletter.visible}
+        <svelte:component this={layoutConfig.newsletter.component} />
     {/if}
 
     <!-- gallery -->
@@ -91,13 +91,13 @@
         <svelte:component this={layoutConfig.gallery.component} />
     {/if}
 
-    <!-- newsletter -->
-    {#if layoutConfig.newsletter.visible}
-        <svelte:component this={layoutConfig.newsletter.component} />
-    {/if}
-
     <!-- contact -->
     {#if layoutConfig.contact.visible}
         <svelte:component this={layoutConfig.contact.component} />
+    {/if}
+
+    <!-- sponsors -->
+    {#if layoutConfig.sponsors.visible}
+        <svelte:component this={layoutConfig.sponsors.component} />
     {/if}
 </main>

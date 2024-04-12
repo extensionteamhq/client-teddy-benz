@@ -1,5 +1,5 @@
 <section class="" id="sponsors">
-    <div class="py-4 px-4 mx-auto max-w-screen-xl sm:text-center">
+    <div class="w-full max-w-screen-2xl mx-auto py-4 px-8 sm:text-center">
         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">My Sponsors</h2>
         <p class="sm:text-xl text-center">Graciously supported by these sponsors, helping me grow, expand, and connect with the world!</p>
         <div class="space-y-4 sm:grid grid-cols-2 sm:gap-4 xl:gap-8 sm:space-y-0 md:mb-8 md:mt-12">
@@ -8,14 +8,14 @@
                 target="_blank"
                 class="block py-12 px-8 text-center bg-neutral-50 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700 rounded-lg shadow-lg shadow-neutral-900/8">
                 <svg
-                    class="mx-auto h-14 text-neutral-900 dark:text-neutral-100"
+                    class="mx-auto h-28 text-neutral-900 dark:text-neutral-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 779.5 779.5"
                     xml:space="preserve"
                     ><path
                         fill="#FFCB31"
                         d="M769.1 154.1c-10.3-14-27.1-22-46.1-22H330.8l-16.5 43.8H723c3.6 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8H123.1c-35.5 0-71.8 27.5-82.8 62.5-6.1 19.5-3.5 39.1 7.2 53.6 10.3 14 27.1 22 46.1 22l522.3.2c3.6 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8l-415-.1c-35.4 0-71.8 27.4-82.8 62.5-6.1 19.5-3.5 39.1 7.2 53.6 10.3 14 27.1 22 46.1 22l338.3.1c3.5 0 8.3.7 10.8 4.1 2.3 3.2 2.6 8.5.7 14.6-5.3 16.9-24.4 31.8-41 31.8H16.5L0 647.4h450.9c35.5 0 71.8-27.5 82.8-62.5 6.1-19.5 3.5-39.1-7.2-53.6-10.3-14-27.1-22-46.1-22l-338.4-.1c-3.6 0-8.3-.7-10.8-4.1-2.3-3.2-2.6-8.5-.7-14.6 5.3-16.9 24.4-31.8 40.9-31.8l415 .1c35.5 0 71.8-27.5 82.8-62.5 6.1-19.5 3.5-39.1-7.2-53.6-10.3-13.9-27.1-22-46.1-22l-522.3-.2c-3.5 0-8.3-.7-10.8-4.1-2.3-3.2-2.6-8.5-.7-14.6 5.3-16.9 24.4-31.8 41-31.8h570.4c35.5 0 71.8-27.5 82.8-62.5 6.1-19.3 3.5-38.9-7.2-53.4z" /></svg>
-                <p class="text-lg font-bold mt-3.5 mb-4">Extension Team</p>
+                <p class="text-lg font-bold mt-1 mb-4">Extension Team</p>
                 <p class="font-light mt-3.5 mb-4"
                     >Marketing Solutions To Reach Your Target Audience and Expand Your Brand. They're An Extension To Your Team.</p>
                 <p class="font-light text-sm mt-3.5 mb-4 text-neutral-500 dark:text-neutral-500"
@@ -29,7 +29,7 @@
                 target="_blank"
                 class="block py-12 px-8 text-center bg-neutral-50 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700 rounded-lg shadow-lg shadow-neutral-900/8">
                 <svg
-                    class="mx-auto h-14 text-neutral-900 dark:text-neutral-100"
+                    class="mx-auto h-28 text-neutral-900 dark:text-neutral-100"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 2000 2000"

@@ -15,6 +15,7 @@
     const handleContact = getContext<() => void>('handleContact');
     const handleConnect = getContext<() => void>('handleConnect');
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
+    let clickCount = 0;
 
     function handleLinkClick(e: MouseEvent, sectionId: string) {
         const navbarContainer = document.getElementById('navbar-hamburger');
@@ -22,6 +23,7 @@
         handleScroll(sectionId);
         navbarContainer?.classList.add('hidden');
         navbarButton?.setAttribute('aria-expanded', 'false');
+        clickCount = 0;
     }
 
     function handleNavMenu() {
@@ -29,6 +31,12 @@
         const navbarButton = document.querySelector('.hamburger');
         navbarContainer?.classList.remove('hidden');
         navbarButton?.setAttribute('aria-expanded', 'true');
+        clickCount++;
+        if (clickCount === 2) {
+            navbarContainer?.classList.add('hidden');
+            navbarButton?.setAttribute('aria-expanded', 'false');
+            clickCount = 0;
+        }
     }
 </script>
 

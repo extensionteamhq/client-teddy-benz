@@ -11,6 +11,7 @@
     // local
     import { layoutConfig } from '../../data/layout';
     import ErrorMessage from '$lib/utils/ErrorMessage.svelte';
+    import ToggleSwitch from '../base/ToggleSwitch.svelte';
 
     let inputPhone: any;
     let isSubmitForm: boolean = false;
@@ -27,7 +28,12 @@
     const email = field('email', '', [required(), validEmail()]);
     const phone = field('phone', '', [required(), ...phonePattern]);
     const message = field('message', '', [required()]);
-    const myForm = form(fname, lname, email, phone, message);
+    const agreePrivacyPolicy = field('agreePrivacyPolicy', false, [required()]);
+    const myForm = form(fname, lname, email, phone, message, agreePrivacyPolicy);
+
+    function toggleSwitch() {
+        $agreePrivacyPolicy.value = !$agreePrivacyPolicy.value;
+    }
 
     const handleFormSubmit = async (e: any) => {
         e.preventDefault();
@@ -36,7 +42,6 @@
             isSubmit = true;
             await myForm.validate();
             const valid = $myForm.valid;
-
             if (valid) {
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
@@ -133,29 +138,23 @@
                                 {/if}
                             </div>
                         </div>
-                        <div class="flex gap-x-4 sm:col-span-2">
-                            <div class="flex h-6 items-center">
-                                <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-                                <button
-                                    type="button"
-                                    class="flex w-8 flex-none cursor-pointer rounded-full p-px transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600"
-                                    role="switch"
-                                    aria-checked="false"
-                                    aria-labelledby="switch-1-label">
-                                    <span class="sr-only">Agree to policies</span>
-                                    <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
-                                    <span
-                                        aria-hidden="true"
-                                        class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
-                                    ></span>
-                                </button>
+                        <div class="flex flex-col gap-x-4 sm:col-span-2 h-14">
+                            <div class="flex gap-x-4">
+                                <div class="flex h-6 items-center">
+                                    <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+                                    <ToggleSwitch checked={$agreePrivacyPolicy.value} handleChange={toggleSwitch} />
+                                </div>
+                                <!-- svelte-ignore a11y-label-has-associated-control -->
+                                <label class="text-sm leading-6" id="switch-1-label">
+                                    By selecting this, you agree to our
+                                    <a href="/privacy-policy" class="font-semibold">privacy&nbsp;policy</a>.
+                                </label>
                             </div>
-                            <!-- svelte-ignore a11y-label-has-associated-control -->
-                            <label class="text-sm leading-6" id="switch-1-label">
-                                By selecting this, you agree to our
-                                <a href="/privacy-policy" class="font-semibold">privacy&nbsp;policy</a>.
-                            </label>
+                            {#if !$agreePrivacyPolicy.value}
+                            <ErrorMessage message="Privacy Policy is required!" />
+                        {/if}
                         </div>
+                        
                     </div>
                     <div class="mt-10">
                         <button type="submit" class="">Let's Talk</button>

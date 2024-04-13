@@ -2,7 +2,7 @@
     // svelte core
 
     // svelte plugins
-    import { getContext } from 'svelte';
+    import { getContext, onMount } from 'svelte';
     // flowbite plugins
 
     // node modules
@@ -10,9 +10,21 @@
     // local
     import { layoutConfig } from '../../data/layout';
     // Access functions from the context
+
+    let showBanner = false;
+
+    onMount(() => {
+        // After 5 seconds, set showBanner to true to trigger the animation
+        setTimeout(() => {
+            showBanner = true;
+        }, 5000);
+    });
 </script>
 
-<div id="banner" tabindex="-1" class="w-full text-neutral-100 bg-neutral-900 dark:text-neutral-900 dark:bg-neutral-100 px-8">
+<div
+    id="banner"
+    tabindex="-1"
+    class="w-full text-neutral-100 bg-neutral-900 dark:text-neutral-900 dark:bg-neutral-100 px-8 {showBanner ? 'slide-down' : 'hidden'}">
     <div class="w-full max-w-screen-2xl m-auto">
         <div class="flex w-full flex-wrap">
             <div class="flex w-full items-center justify-center">

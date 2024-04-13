@@ -787,7 +787,7 @@ balanced-match@^1.0.0:
 
 bigger-picture@^1.1.16:
   version "1.1.16"
-  resolved "https://registry.npmjs.org/bigger-picture/-/bigger-picture-1.1.16.tgz"
+  resolved "https://registry.yarnpkg.com/bigger-picture/-/bigger-picture-1.1.16.tgz#cfcd092bad1f7d6e6c5d25167dd9e45ae1225a81"
   integrity sha512-dLy5K0NFgvknqU21HektQTdP7ZlLNVJ7BFPRvB0/XqZ0qfLAntIT0Pa78HvXLl2M9H/x7t74HlNRJdgb7NtEgA==
 
 binary-extensions@^2.0.0:
@@ -2317,6 +2317,7 @@ std-env@^3.5.0:
   integrity sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==

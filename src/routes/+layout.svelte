@@ -93,7 +93,7 @@
     <!-- navbar -->
     <svelte:component this={layoutConfig.navbar} {handleConnect} />
     <!-- body -->
-    <slot {handleConnect} />
+    <slot {handleConnect} {handleCalendly} />
     <!-- footer -->
     <svelte:component this={layoutConfig.footer} />
 {/if}

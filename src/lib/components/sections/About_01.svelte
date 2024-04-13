@@ -46,6 +46,7 @@
                         clip-rule="evenodd"></path
                     ></svg>
             </button>
+            <button type="button" class="mt-14 mx-4 secondary" on:click={handleCalendly}>Book A Meeting </button>
         </div>
     </div>
 </section>

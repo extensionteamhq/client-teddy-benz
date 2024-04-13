@@ -56,11 +56,6 @@
     <!-- hero -->
     <svelte:component this={layoutConfig.hero} />
 
-    <!-- feature -->
-    {#if layoutConfig.feature.visible}
-        <svelte:component this={layoutConfig.feature.component} />
-    {/if}
-
     <!-- services -->
     {#if layoutConfig.service.visible}
         <svelte:component this={layoutConfig.service.component} />
@@ -71,14 +66,14 @@
         <svelte:component this={layoutConfig.about.component} />
     {/if}
 
+    <!-- feature -->
+    {#if layoutConfig.feature.visible}
+        <svelte:component this={layoutConfig.feature.component} />
+    {/if}
+
     <!-- video -->
     {#if layoutConfig.video.visible}
         <svelte:component this={layoutConfig.video.component} />
-    {/if}
-
-    <!-- cta -->
-    {#if layoutConfig.cta.visible}
-        <svelte:component this={layoutConfig.cta.component} />
     {/if}
 
     <!-- newsletter -->
@@ -89,6 +84,11 @@
     <!-- gallery -->
     {#if layoutConfig.gallery.visible}
         <svelte:component this={layoutConfig.gallery.component} />
+    {/if}
+
+    <!-- cta -->
+    {#if layoutConfig.cta.visible}
+        <svelte:component this={layoutConfig.cta.component} />
     {/if}
 
     <!-- contact -->

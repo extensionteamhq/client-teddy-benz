@@ -21,7 +21,7 @@
     // This function will be called when the content has loaded
     onMount(async () => {
         // Simulate an async operation, like fetching data
-        await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
+        await new Promise((resolve) => setTimeout(resolve, 500)); // Wait for 1/2 second
 
         // Wait for the next microtask to ensure the DOM is updated
         await tick();

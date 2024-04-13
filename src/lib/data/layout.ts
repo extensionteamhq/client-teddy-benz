@@ -197,44 +197,41 @@ const logo: Logo = {
 // info banners
 import InfoBanner_01 from '$lib/components/sections/InfoBanner_01.svelte';
 
-// navbars
+// navbar
 import NavBar_01 from '$lib/components/sections/NavBar_01.svelte';
-import NavBar_02 from '$lib/components/sections/NavBar_02.svelte';
-import NavBar_03 from '$lib/components/sections/NavBar_03.svelte';
 
-// heros
+// hero
 import Hero_01 from '$lib/components/sections/Hero_01.svelte';
 import Hero_02 from '$lib/components/sections/Hero_02.svelte';
 
-// features
+// feature
 import Feature_01 from '$lib/components/sections/Feature_01.svelte';
-import Feature_02 from '$lib/components/sections/Feature_02.svelte';
 
-// services
+// service
 import Service_01 from '$lib/components/sections/Service_01.svelte';
 
-// abouts
+// about
 import About_01 from '$lib/components/sections/About_01.svelte';
 
-// videos
+// video
 import ContentVideo_01 from '$lib/components/sections/ContentVideo_01.svelte';
 
-// gallerys
+// gallery
 import Gallery_01 from '$lib/components/sections/Gallery_01.svelte';
 
-// ctas
+// cta
 import CallToAction_01 from '$lib/components/sections/CallToAction_01.svelte';
 
-// sponsors
+// sponsor
 import Sponsors_01 from '$lib/components/sections/Sponsors_01.svelte';
 
-// newsletters
+// newsletter
 import Newsletter_01 from '$lib/components/forms/Newsletter_01.svelte';
 
-// contacts
+// contact
 import Contact_01 from '$lib/components/sections/Contact_01.svelte';
 
-// footers
+// footer
 import Footer_01 from '$lib/components/sections/Footer_01.svelte';
 import Footer_02 from '$lib/components/sections/Footer_02.svelte';
 
@@ -251,7 +248,7 @@ export const layoutConfig: LayoutConfig = {
     hero: Hero_01,
     feature: {
         component: Feature_01,
-        visible: false,
+        visible: true,
     },
     service: {
         component: Service_01,
@@ -263,7 +260,7 @@ export const layoutConfig: LayoutConfig = {
     },
     video: {
         component: ContentVideo_01,
-        visible: false,
+        visible: true,
     },
     gallery: {
         component: Gallery_01,
@@ -271,7 +268,7 @@ export const layoutConfig: LayoutConfig = {
     },
     cta: {
         component: CallToAction_01,
-        visible: false,
+        visible: true,
     },
     sponsors: {
         component: Sponsors_01,

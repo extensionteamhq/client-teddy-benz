@@ -229,7 +229,7 @@ textarea {
     transform: rotate(-45deg);
 }
 
-
+/* slide down */
 .slide-down {
     animation: slideDown 0.5s ease forwards;
 }

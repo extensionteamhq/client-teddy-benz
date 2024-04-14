@@ -6,15 +6,14 @@
     import { getContext } from 'svelte';
     // svelte plugins
 
-    // flowbite plugins
-
-    // node modules
+    // other plugins and modules
 
     // local
     const handleCalendly = getContext<() => void>('handleCalendly');
     const handleContact = getContext<() => void>('handleContact');
     const handleConnect = getContext<() => void>('handleConnect');
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
+
     let clickCount = 0;
 
     function handleLinkClick(e: MouseEvent, sectionId: string) {
@@ -83,9 +82,15 @@
                     <!-- Left links -->
                     <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row text-center lg:text-left">
                         <!-- Home link -->
-                        <!-- <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
-                        <a class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400" aria-current="page" href="/" on:click|preventDefault={() => handleScroll('home')}>Home</a>
-                    </li> -->
+                        <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 md:list-item lg:hidden">
+                            <a
+                                class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400"
+                                aria-current="page"
+                                href="/"
+                                on:click|preventDefault={(e) => handleLinkClick(e, 'home')}>
+                                Home
+                            </a>
+                        </li>
                         <!-- Services Link -->
                         <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
                             <a
@@ -116,8 +121,9 @@
                     </ul>
                     <div class="flex items-center">
                         <button
+                            id="letConnect"
                             type="button"
-                            class="!hidden lg:!inline-flex items-center px-5 py-3 mt-4 mb-8 lg:m-0 text-base text-center rounded-lg"
+                            class="inline-flex items-center px-5 py-3 mt-4 mb-8 lg:m-0 text-base text-center rounded-lg mx-auto"
                             on:click={handleConnect}>
                             Let's Connect
                             <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

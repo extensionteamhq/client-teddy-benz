@@ -12,7 +12,7 @@
     import { DarkMode } from 'flowbite-svelte';
     // node modules
     import Icon from '@iconify/svelte';
-    // local
+    // Component imports
     import { layoutConfig } from '../lib/data/layout';
     import NotFound from '$lib/components/base/NotFound.svelte';
     import Privacy from '$lib/components/base/Privacy.svelte';
@@ -52,7 +52,7 @@
         const section = document.getElementById(sectionId);
         if (section) {
             // Smooth scroll to just above the section
-            const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 7;
+            const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 10;
             window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             // Update the browser's URL without navigating
             //window.history.pushState({}, '', '/' + sectionId);

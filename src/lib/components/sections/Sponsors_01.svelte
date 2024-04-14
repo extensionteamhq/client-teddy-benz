@@ -1,4 +1,4 @@
-<section class="" id="sponsors">
+<section id="sponsors" class="py-8 lg:py-16 text-center relative">
     <div class="w-full max-w-screen-2xl mx-auto py-4 px-8 sm:text-center">
         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">My Sponsors</h2>
         <p class="sm:text-xl text-center">Graciously supported by these sponsors, helping me grow, expand, and connect with the world!</p>

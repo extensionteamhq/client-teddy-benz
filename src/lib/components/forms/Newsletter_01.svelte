@@ -84,7 +84,8 @@
                                     bind:value={$newsEmail.value} />
                             </div>
                             <div>
-                                <button type="submit" class="sm:rounded-none sm:rounded-r-lg !bg-neutral-600 dark:!bg-neutral-300 !m-0">Subscribe</button>
+                                <button type="submit" class="sm:rounded-none sm:rounded-r-lg !bg-neutral-600 dark:!bg-neutral-300 sm:mt-1 md:!m-0"
+                                    >Subscribe</button>
                             </div>
                         </div>
                         <div class="leading-7 relative text-left">

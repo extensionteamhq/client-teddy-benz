@@ -23,8 +23,8 @@
             <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-neutral-100">Boost Your Productivity Today</h2>
             <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
                 >Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-                <button type="button" class="mr-4 mb-0" on:click={handleConnect}
+            <div class="mt-10 flex items-center justify-center gap-x-2 md:gap-x-6">
+                <button type="button" class="md:mr-4 sm:mr-0.5 mb-0" on:click={handleConnect}
                     >Let's Connect
                     <svg class="w-5 h-5 ml-2 -mr-1 hidden md:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                         ><path

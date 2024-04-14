@@ -79,7 +79,7 @@
                     <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">Contact Me</h2>
                     <p class="sm:text-xl text-center">I help companies and individuals connect with with the right business partners.</p>
                 </div>
-                <form action="/" method="POST" class="relative mx-auto mt-16 max-w-xl sm:mt-20" on:submit={handleFormSubmit}>
+                <form action="/" method="POST" class="relative mx-auto mt-16 max-w-xl sm:mt-20 text-left" on:submit={handleFormSubmit}>
                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                             <label for="fname" class="block text-sm font-semibold leading-6">First name</label>
@@ -151,12 +151,11 @@
                                 </label>
                             </div>
                             {#if $myForm.hasError('acceptPrivacyPolicy.required')}
-                            <ErrorMessage message="Privacy Policy is required!" />
-                        {/if}
+                                <ErrorMessage message="Privacy Policy is required!" />
+                            {/if}
                         </div>
-                        
                     </div>
-                    <div class="mt-10">
+                    <div class="mt-0 text-right">
                         <button type="submit" class="">Let's Talk</button>
                     </div>
                 </form>

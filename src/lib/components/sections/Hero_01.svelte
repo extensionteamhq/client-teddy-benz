@@ -16,7 +16,7 @@
     const handleScroll = getContext<(sectionId: string) => void>('handleScroll');
 </script>
 
-<section id="hero" class="flex flex-wrap w-full max-w-screen-2xl mx-auto items-center justify-between lg:text-left md:text-center">
+<section id="hero" class="flex flex-wrap w-full max-w-screen-2xl mx-auto items-center justify-between lg:text-left text-center mt-40">
     <div class="">
         <div class="grid gap-8 lg:grid-cols-12 items-center mx-8 my-8 lg:my-24">
             <div class="place-self-center lg:col-span-7">

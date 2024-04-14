@@ -28,11 +28,11 @@
     const email = field('email', '', [required(), validEmail()]);
     const phone = field('phone', '', [required(), ...phonePattern]);
     const message = field('message', '', [required()]);
-    const agreePrivacyPolicy = field('agreePrivacyPolicy', false, [required()]);
-    const myForm = form(fname, lname, email, phone, message, agreePrivacyPolicy);
+    const acceptPrivacyPolicy = field('acceptPrivacyPolicy', '', [required()]);
+    const myForm = form(fname, lname, email, phone, message, acceptPrivacyPolicy);
 
     function toggleSwitch() {
-        $agreePrivacyPolicy.value = !$agreePrivacyPolicy.value;
+        $acceptPrivacyPolicy.value = !$acceptPrivacyPolicy.value;
     }
 
     const handleFormSubmit = async (e: any) => {
@@ -142,7 +142,7 @@
                             <div class="flex gap-x-4">
                                 <div class="flex h-6 items-center">
                                     <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-                                    <ToggleSwitch checked={$agreePrivacyPolicy.value} handleChange={toggleSwitch} />
+                                    <ToggleSwitch checked={$acceptPrivacyPolicy.value} handleChange={toggleSwitch} />
                                 </div>
                                 <!-- svelte-ignore a11y-label-has-associated-control -->
                                 <label class="text-sm leading-6" id="switch-1-label">
@@ -150,7 +150,7 @@
                                     <a href="/privacy-policy" class="font-semibold">privacy&nbsp;policy</a>.
                                 </label>
                             </div>
-                            {#if !$agreePrivacyPolicy.value}
+                            {#if $myForm.hasError('acceptPrivacyPolicy.required')}
                             <ErrorMessage message="Privacy Policy is required!" />
                         {/if}
                         </div>

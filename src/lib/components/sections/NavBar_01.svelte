@@ -101,7 +101,7 @@
                     aria-controls="navbar-hamburger"
                     aria-expanded="false">
                     <!-- Hamburger icon -->
-                    <span class="[&>svg]:w-8 [&>svg]:stroke-neutral-900 dark:[&>svg]:stroke-neutral-100">
+                    <span class="[&>svg]:w-8 [&>svg]:stroke-neutral-900 dark:[&>svg]:stroke-neutral-100 [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 fill-rule="evenodd"

@@ -73,7 +73,7 @@
                             </div>
 
                             <!-- Modal body -->
-                            <div class="relative p-4 min-[0px]:overflow-y-auto">
+                            <div class="relative p-4 min-[0px]:overflow-y-auto max-h-full">
                                 <div class="px-6 py-20 pb-0 lg:px-8 max-w-screen-2xl mx-auto">
                                     <div class="flex flex-wrap justify-between gap-4">
                                         <!-- QR Code -->
@@ -86,7 +86,7 @@
                                                             class="max-full min-w-[293px] mx-auto text-center text-neutral-900 bg-neutral-100 rounded-lg shadow-lg shadow-neutral-900/60"
                                                             use:qr={{
                                                                 data: fullPath,
-                                                                logo: '/images/alex-suprun-ZHvM3XIOHoE-unsplash.webp',
+                                                                logo: layoutConfig.logo.src,
                                                                 shape: 'circle',
                                                             }} />
                                                     </a>
@@ -131,7 +131,7 @@
                                                                 <dt class="flex-none">
                                                                     <span class="sr-only">Contact</span>
                                                                     <svg
-                                                                        class="h-7 w-6 text-gray-400"
+                                                                        class="h-7 w-6 text-neutral-500"
                                                                         fill="none"
                                                                         viewBox="0 0 24 24"
                                                                         stroke-width="1.5"
@@ -144,81 +144,128 @@
                                                                     </svg>
                                                                 </dt>
                                                                 <dd>
-                                                                    {layoutConfig.site.fullName}
-                                                                    <br />
-                                                                    {layoutConfig.site.orgTitle}
+                                                                    {#if layoutConfig.site.fullName !== ''}
+                                                                        {layoutConfig.site.fullName}
+                                                                        <br />
+                                                                    {/if}
+                                                                    {#if layoutConfig.site.orgTitle !== ''}
+                                                                        {layoutConfig.site.orgTitle}
+                                                                    {/if}
                                                                 </dd>
                                                             </div>
-                                                            <div class="flex gap-x-4">
-                                                                <dt class="flex-none">
-                                                                    <span class="sr-only">Address</span>
-                                                                    <svg
-                                                                        class="h-7 w-6 text-gray-400"
-                                                                        fill="none"
-                                                                        viewBox="0 0 24 24"
-                                                                        stroke-width="1.5"
-                                                                        stroke="currentColor"
-                                                                        aria-hidden="true">
-                                                                        <path
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                                                                    </svg>
-                                                                </dt>
-                                                                <dd>
-                                                                    {layoutConfig.site.orgName}
-                                                                    <br />
-                                                                    {layoutConfig.site.addStreet1_02}
-                                                                    {layoutConfig.site.addStreet2_02}
-                                                                    <br />
-                                                                    {layoutConfig.site.addCity_02}, {layoutConfig.site.addRegion_02}
-                                                                    {layoutConfig.site.addPostalCode_02}
-                                                                </dd>
-                                                            </div>
-                                                            <div class="flex gap-x-4">
-                                                                <dt class="flex-none">
-                                                                    <span class="sr-only">Telephone</span>
-                                                                    <svg
-                                                                        class="h-7 w-6 text-gray-400"
-                                                                        fill="none"
-                                                                        viewBox="0 0 24 24"
-                                                                        stroke-width="1.5"
-                                                                        stroke="currentColor"
-                                                                        aria-hidden="true">
-                                                                        <path
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                                                                    </svg>
-                                                                </dt>
-                                                                <dd>
-                                                                    <a class="hover:text-gray-900" href="tel:{layoutConfig.site.telNumDigits_02}">
-                                                                        {layoutConfig.site.telNumber_02}
-                                                                    </a>
-                                                                </dd>
-                                                            </div>
-                                                            <div class="flex gap-x-4">
-                                                                <dt class="flex-none">
-                                                                    <span class="sr-only">Email</span>
-                                                                    <svg
-                                                                        class="h-7 w-6 text-gray-400"
-                                                                        fill="none"
-                                                                        viewBox="0 0 24 24"
-                                                                        stroke-width="1.5"
-                                                                        stroke="currentColor"
-                                                                        aria-hidden="true">
-                                                                        <path
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                                                                    </svg>
-                                                                </dt>
-                                                                <dd>
-                                                                    <a class="hover:text-gray-900" href="mailto:{layoutConfig.site.emailAdd_02}">
-                                                                        {layoutConfig.site.emailAdd_02}
-                                                                    </a>
-                                                                </dd>
-                                                            </div>
+                                                            {#if layoutConfig.site.orgName || layoutConfig.site.addStreet1_02 || layoutConfig.site.addStreet2_02 || layoutConfig.site.addCity_02 || layoutConfig.site.addRegion_02 || layoutConfig.site.addPostalCode_02 !== ''}
+                                                                <div class="flex gap-x-4">
+                                                                    <dt class="flex-none">
+                                                                        <span class="sr-only">Address</span>
+                                                                        <svg
+                                                                            class="h-7 w-6 text-neutral-500"
+                                                                            fill="none"
+                                                                            viewBox="0 0 24 24"
+                                                                            stroke-width="1.5"
+                                                                            stroke="currentColor"
+                                                                            aria-hidden="true">
+                                                                            <path
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                                                        </svg>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        {#if layoutConfig.site.orgName !== ''}
+                                                                            {layoutConfig.site.orgName}
+                                                                            <br />
+                                                                        {/if}
+                                                                        {#if layoutConfig.site.addStreet1_02 !== ''}
+                                                                            {layoutConfig.site.addStreet1_02}
+                                                                        {/if}
+                                                                        {#if layoutConfig.site.addStreet2_02 !== ''}
+                                                                            {layoutConfig.site.addStreet2_02}
+                                                                            <br />
+                                                                        {/if}
+                                                                        {#if layoutConfig.site.addCity_02 !== ''}
+                                                                            {layoutConfig.site.addCity_02}
+                                                                        {/if}
+                                                                        {#if layoutConfig.site.addCity_02 && layoutConfig.site.addRegion_02 !== ''}
+                                                                            , {layoutConfig.site.addRegion_02}
+                                                                        {:else}
+                                                                            {layoutConfig.site.addRegion_02}
+                                                                        {/if}
+                                                                        {#if layoutConfig.site.addPostalCode_02 !== ''}
+                                                                            {layoutConfig.site.addPostalCode_02}
+                                                                        {/if}
+                                                                    </dd>
+                                                                </div>
+                                                            {/if}
+                                                            {#if layoutConfig.site.telNumDigits_02 !== ''}
+                                                                <div class="flex gap-x-4">
+                                                                    <dt class="flex-none">
+                                                                        <span class="sr-only">Telephone</span>
+                                                                        <svg
+                                                                            class="h-7 w-6 text-neutral-500"
+                                                                            fill="none"
+                                                                            viewBox="0 0 24 24"
+                                                                            stroke-width="1.5"
+                                                                            stroke="currentColor"
+                                                                            aria-hidden="true">
+                                                                            <path
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                                                        </svg>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        <a class="hover:text-gray-900" href="tel:{layoutConfig.site.telNumDigits_02}">
+                                                                            {layoutConfig.site.telNumber_02}
+                                                                        </a>
+                                                                    </dd>
+                                                                </div>
+                                                            {/if}
+                                                            {#if layoutConfig.site.emailAdd_02 !== ''}
+                                                                <div class="flex gap-x-4">
+                                                                    <dt class="flex-none">
+                                                                        <span class="sr-only">Email</span>
+                                                                        <svg
+                                                                            class="h-7 w-6 text-neutral-500"
+                                                                            fill="none"
+                                                                            viewBox="0 0 24 24"
+                                                                            stroke-width="1.5"
+                                                                            stroke="currentColor"
+                                                                            aria-hidden="true">
+                                                                            <path
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                                                        </svg>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        <a class="hover:text-gray-900" href="mailto:{layoutConfig.site.emailAdd_02}">
+                                                                            {layoutConfig.site.emailAdd_02}
+                                                                        </a>
+                                                                    </dd>
+                                                                </div>
+                                                            {/if}
+                                                            {#if layoutConfig.site.vCardNote !== ''}
+                                                                <div class="flex gap-x-4">
+                                                                    <dt class="flex-none">
+                                                                        <span class="sr-only">Note</span>
+                                                                        <svg
+                                                                            class="h-7 w-6 text-neutral-500"
+                                                                            fill="none"
+                                                                            viewBox="0 0 24 24"
+                                                                            stroke-width="1.5"
+                                                                            stroke="currentColor"
+                                                                            aria-hidden="true">
+                                                                            <path
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                                                        </svg>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        {layoutConfig.site.vCardNote}
+                                                                    </dd>
+                                                                </div>
+                                                            {/if}
                                                         </dl>
                                                     </div>
                                                 </div>

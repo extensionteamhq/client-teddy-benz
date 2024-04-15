@@ -1,5 +1,5 @@
 <script lang="ts">
-    // @ts-nocheck
+     // @ts-nocheck
     // svelte core
     import { onMount, tick } from 'svelte';
     import { writable } from 'svelte/store';
@@ -9,23 +9,16 @@
     // other plugins
     import { Spinner } from 'flowbite-svelte';
 
-    // node modules
-
     // local
     let isLoading = writable(true);
     export let isOpen: boolean;
 
-    // This function will be called when the content has loaded
-    onMount(async () => {
-        // Simulate an async operation, like fetching data
-        await new Promise((resolve) => setTimeout(resolve, 3000)); // Wait for 1 second
-
-        // Wait for the next microtask to ensure the DOM is updated
-        await tick();
-
-        // Now, set isLoading to false to hide the spinner and show the content
+    
+    // Function to handle Calendly widget load
+    function calendlyLoaded() {
+        // Once Calendly widget is loaded, set isLoading to false to hide the spinner
         isLoading.set(false);
-    });
+    }
 </script>
 
 {#if isOpen}
@@ -70,7 +63,9 @@
                                     <div
                                         class="calendly-inline-widget"
                                         data-url="https://calendly.com/brandedsites/30min?hide_gdpr_banner=1&background_color=f5f5f5&text_color=171717&primary_color=171717"
-                                        style="min-width:320px;height:700px;">
+                                        style="min-width:320px;height:700px;"
+                                        on:load={calendlyLoaded}>
+                                        
                                     </div>
                                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                                     <!-- Calendly inline widget end -->

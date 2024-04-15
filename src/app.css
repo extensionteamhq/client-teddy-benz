@@ -229,9 +229,14 @@ textarea {
     transform: rotate(-45deg);
 }
 
-/* slide down */
+
 .slide-down {
     animation: slideDown 0.5s ease forwards;
+    display: block;
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease forwards;
 }
 
 @keyframes slideDown {
@@ -241,4 +246,19 @@ textarea {
     to {
         transform: translateY(0);
     }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+        display: none;
+    }
+}
+
+.speed_dial button{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }

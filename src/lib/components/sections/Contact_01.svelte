@@ -7,11 +7,13 @@
     import { pattern, required, email as validEmail } from 'svelte-forms/validators';
     import { imask } from '@imask/svelte';
     // other plugins and modules
-
+    import { Resend } from 'resend';
     // local
     import { layoutConfig } from '../../data/layout';
     import ErrorMessage from '$lib/utils/ErrorMessage.svelte';
     import ToggleSwitch from '../base/ToggleSwitch.svelte';
+
+    const resend = new Resend('re_ChpPgXMv_KoVUSKTpBt6pscDtRMvW6Qjj');
 
     let inputPhone: any;
     let isSubmitForm: boolean = false;
@@ -68,6 +70,14 @@
             console.log(error);
         }
     };
+
+    // resend
+    // resend.emails.send({
+    //     from: 'onboarding@resend.dev',
+    //     to: 'brandedsites@extension.team',
+    //     subject: 'Hello World',
+    //     html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+    // });
 </script>
 
 <section id="contact" class="pt-8 lg:pt-16 mt-10 text-center relative">

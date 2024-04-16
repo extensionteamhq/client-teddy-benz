@@ -24,6 +24,7 @@
         const navbarButton = document.querySelector('.hamburger');
         navbarContainer?.classList.add('hidden');
         navbarButton?.setAttribute('aria-expanded', 'false');
+        clickCount = 0;
     }
 
     const handleScrollSite = () => {

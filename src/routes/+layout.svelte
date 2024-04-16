@@ -56,16 +56,14 @@
 
     // Function to scroll to a section by ID
     function handleScroll(sectionId: string): void {
-        // const section = document.getElementById(sectionId);
-        // if (section) {
-        //     // Smooth scroll to just above the section
-        //     const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 10;
-        //     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-        //     // Update the browser's URL without navigating
-        //     //window.history.pushState({}, '', '/' + sectionId);
-        // }
-        
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const section = document.getElementById(sectionId);
+        if (section) {
+            // Smooth scroll to just above the section
+            const offsetTop = section.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(document.documentElement).fontSize) * 10;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            // Update the browser's URL without navigating
+            //window.history.pushState({}, '', '/' + sectionId);
+        }
     }
 
     // Use setContext to provide these functions to all child components
@@ -119,7 +117,9 @@
 <div class="speed_dial">
     <SpeedDial>
         <!-- Back To Top -->
-        <SpeedDialButton name="Back To Top" on:click={handleScroll}>
+        <SpeedDialButton name="Back To Top" on:click={() =>{
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" {...$$props}>
                 <path fill="currentColor" d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8z" />
             </svg>

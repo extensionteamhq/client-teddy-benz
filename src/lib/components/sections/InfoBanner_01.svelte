@@ -16,12 +16,12 @@
     let isFirstRender: boolean = true;
 
     function onClose() {
-    const banner = document.getElementById('banner');
-    if (banner) {
-      banner.classList.add('slide-up');
-      showBanner = false;
+        const banner = document.getElementById('banner');
+        if (banner) {
+            banner.classList.add('slide-up');
+            showBanner = false;
+        }
     }
-  }
 
     onMount(() => {
         setTimeout(() => {
@@ -35,7 +35,11 @@
     <div
         id="banner"
         tabindex="-1"
-        class="w-full text-neutral-100 bg-neutral-900 dark:text-neutral-900 dark:bg-neutral-100 px-8 {showBanner ? 'slide-down' : isFirstRender ? 'hidden' : 'slide-up'}">
+        class="w-full text-neutral-100 bg-neutral-900 dark:text-neutral-900 dark:bg-neutral-100 px-8 {showBanner
+            ? 'slide-down'
+            : isFirstRender
+              ? 'hidden'
+              : 'slide-up'}">
         <div class="w-full max-w-screen-2xl m-auto">
             <div class="flex w-full flex-wrap">
                 <div class="flex w-full items-center justify-center">
@@ -49,7 +53,7 @@
                     <p class="text-sm md:text-base leading-6 p-0 m-0 text-center"
                         ><span class="font-bold">Going to SquadUp Summit?</span> Message me on
                         <a
-                            href="https://instagram.com/{layoutConfig.site.socialHandle_04}"
+                            href="https://instagram.com/{layoutConfig.site.socialHandle_02}"
                             target="_blank"
                             class="border p-0.5 mx-0.5 pr-1 whitespace-nowrap rounded text-neutral-900 bg-neutral-300 hover:text-neutral-100 hover:bg-neutral-900 dark:hover:text-neutral-900 dark:hover:bg-neutral-100"
                             ><span class=" [&>svg]:h-5 [&>svg]:w-5">

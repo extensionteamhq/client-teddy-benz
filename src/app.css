@@ -229,7 +229,7 @@ textarea {
     transform: rotate(-45deg);
 }
 
-
+/* slide up/down */
 .slide-down {
     animation: slideDown 0.5s ease forwards;
     display: block;
@@ -258,7 +258,8 @@ textarea {
     }
 }
 
-.speed_dial button{
+/* speed dial */
+.speed_dial button {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }

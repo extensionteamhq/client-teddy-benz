@@ -117,9 +117,11 @@
 <div class="speed_dial">
     <SpeedDial>
         <!-- Back To Top -->
-        <SpeedDialButton name="Back To Top" on:click={() =>{
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}>
+        <SpeedDialButton
+            name="Back To Top"
+            on:click={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" {...$$props}>
                 <path fill="currentColor" d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8z" />
             </svg>
@@ -128,9 +130,9 @@
         <!-- Mode -->
         <SpeedDialButton name="Mode" on:click={toggleDarkMode}>
             {#if darkMode}
-                <DarkMode ariaLabel="Dark Mode" />
+                <DarkMode btnClass="mode" ariaLabel="Dark Mode" />
             {:else}
-                <DarkMode ariaLabel="Light Mode" />
+                <DarkMode btnClass="mode" ariaLabel="Light Mode" />
             {/if}
             <svg width="20px" height="20px" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path

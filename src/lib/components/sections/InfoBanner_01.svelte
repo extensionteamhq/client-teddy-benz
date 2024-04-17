@@ -27,7 +27,7 @@
         setTimeout(() => {
             showBanner = true;
             isFirstRender = false;
-        }, 2500);
+        }, 2000);
     });
 </script>
 

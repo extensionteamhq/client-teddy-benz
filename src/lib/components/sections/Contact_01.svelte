@@ -44,6 +44,7 @@
             isSubmit = true;
             await myForm.validate();
             const valid = $myForm.valid;
+            if(!$acceptPrivacyPolicy.value) return;
             if (valid) {
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
@@ -160,7 +161,7 @@
                                     <a href="/privacy-policy" class="font-semibold">privacy&nbsp;policy</a>.
                                 </label>
                             </div>
-                            {#if $myForm.hasError('acceptPrivacyPolicy.required')}
+                            {#if $myForm.hasError('acceptPrivacyPolicy.required') || isSubmit && !$acceptPrivacyPolicy.value}
                                 <ErrorMessage message="Privacy Policy is required!" />
                             {/if}
                         </div>

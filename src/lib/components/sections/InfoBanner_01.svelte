@@ -16,11 +16,7 @@
     let isFirstRender: boolean = true;
 
     function onClose() {
-        const banner = document.getElementById('banner');
-        if (banner) {
-            banner.classList.add('slide-up');
-            showBanner = false;
-        }
+        showBanner = false;
     }
 
     onMount(() => {
@@ -29,17 +25,18 @@
             isFirstRender = false;
         }, 2000);
     });
+
 </script>
 
-{#if !$isScroll}
+{#if !$isScroll || !showBanner}
     <div
         id="banner"
         tabindex="-1"
         class="w-full text-neutral-100 bg-neutral-900 dark:text-neutral-900 dark:bg-neutral-100 px-8 {showBanner
             ? 'slide-down'
-            : isFirstRender
-              ? 'hidden'
-              : 'slide-up'}">
+            : showBanner === false && !isFirstRender
+              ? 'slide-up'
+              : 'hidden'}">
         <div class="w-full max-w-screen-2xl m-auto">
             <div class="flex w-full flex-wrap">
                 <div class="flex w-full items-center justify-center">

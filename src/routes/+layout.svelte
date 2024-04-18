@@ -83,10 +83,11 @@
     let CurrentComponent = pathToComponent[$page.url.pathname];
 
     // Determine if it's a 404 scenario
-    const isNotFound = $page.error?.message === 'Not Found' && !CurrentComponent;
+    let isNotFound = $page.error?.message === 'Not Found' && !CurrentComponent;
 
     // debug
     // console.log($page.error); // Add this line to debug
+    $: isNotFound = $page.error?.message === 'Not Found' && !CurrentComponent
 </script>
 
 {#if CurrentComponent}

@@ -13,6 +13,7 @@
   // local
   function navigateToHome() {
     goto('/');
+    
   }
   export let error: string;
 </script>
@@ -31,13 +32,13 @@
     </h1>
     <p class="mt-6 text-base leading-7">
       Sorry, we could not find the page you were looking for.
-    <!-- </p>
+    </p>
     <div class="mt-10 flex items-center justify-center gap-x-6">
       <button 
-        onclick={navigateToHome} 
+        on:click={navigateToHome} 
         class="rounded-md px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm text-white bg-gray-700 hover:bg-gray-400 focus-visible:outline-gray-400 focus-visible:outline">
         Go To Our Home Page
       </button>
-    </div> -->
+    </div>
   </div>
 </div>

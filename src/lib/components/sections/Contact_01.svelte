@@ -9,7 +9,7 @@
     // other plugins and modules
     import { Resend } from 'resend';
     // local
-    import { layoutConfig } from '../../data/layout';
+    import { layoutConfig } from '$lib/data/layout';
     import ErrorMessage from '$lib/utils/ErrorMessage.svelte';
     import ToggleSwitch from '../base/ToggleSwitch.svelte';
 
@@ -31,7 +31,7 @@
     const phone = field('phone', '', [required(), ...phonePattern]);
     const message = field('message', '', [required()]);
     const acceptPrivacyPolicy = field('acceptPrivacyPolicy', '', [required()]);
-    const myForm = form(fname, lname, email, phone, message, acceptPrivacyPolicy);
+    const myForm = form(fname, lname, company, email, phone, message, acceptPrivacyPolicy);
 
     function toggleSwitch() {
         $acceptPrivacyPolicy.value = !$acceptPrivacyPolicy.value;
@@ -44,7 +44,7 @@
             isSubmit = true;
             await myForm.validate();
             const valid = $myForm.valid;
-            if(!$acceptPrivacyPolicy.value) return;
+            if (!$acceptPrivacyPolicy.value) return;
             if (valid) {
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
@@ -161,7 +161,7 @@
                                     <a href="/privacy-policy" class="font-semibold">privacy&nbsp;policy</a>.
                                 </label>
                             </div>
-                            {#if $myForm.hasError('acceptPrivacyPolicy.required') || isSubmit && !$acceptPrivacyPolicy.value}
+                            {#if $myForm.hasError('acceptPrivacyPolicy.required') || (isSubmit && !$acceptPrivacyPolicy.value)}
                                 <ErrorMessage message="Privacy Policy is required!" />
                             {/if}
                         </div>

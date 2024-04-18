@@ -8,7 +8,7 @@
     // node modules
 
     // local
-    import { layoutConfig } from '../../data/layout';
+    import { layoutConfig } from '$lib/data/layout';
     // Access functions from the context
     const handleCalendly = getContext<() => void>('handleCalendly');
     const handleContact = getContext<() => void>('handleContact');

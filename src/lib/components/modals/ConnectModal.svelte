@@ -5,7 +5,7 @@
     import { onMount, tick } from 'svelte';
     import { writable } from 'svelte/store';
     import { fade } from 'svelte/transition';
-    import { layoutConfig } from '../../data/layout';
+    import { layoutConfig } from '$lib/data/layout';
     // svelte plugins
     import { closeModal } from 'svelte-modals';
     // flowbite plugins

@@ -8,7 +8,7 @@
     // node modules
 
     // local
-    import { layoutConfig } from '../../data/layout';
+    import { layoutConfig } from '$lib/data/layout';
 </script>
 
 <!--Footer container-->

@@ -11,6 +11,18 @@
         @apply text-neutral-100;
         @apply bg-neutral-900;
     }
+    .primary-color {
+        @apply text-neutral-900;
+        @apply bg-neutral-900;
+    }
+    .opposing-color {
+        @apply text-neutral-900;
+        @apply bg-neutral-100;
+    }
+    .inverse-color {
+        @apply text-neutral-900;
+        @apply bg-neutral-100;
+    }
 }
 
 @tailwind components;
@@ -30,50 +42,127 @@ p {
 
 /* buttons */
 button {
-    @apply !inline-flex px-5 py-3 my-4 text-base items-center text-center rounded-lg shadow-sm focus-visible:outline transition-all duration-300 ease-in cursor-pointer disabled:opacity-100
-    
-    focus:ring-2
-    disabled:focus:ring-0
-    focus:ring-neutral-900
-    dark:focus:ring-neutral-100
+    @apply !inline-flex px-5 py-3 my-4 text-base items-center text-center rounded-lg shadow-sm focus-visible:outline transition-all duration-300 ease-in cursor-pointer disabled:opacity-100 font-bold shadow-lg shadow-neutral-900/30 dark:shadow-neutral-900/30
     
     text-neutral-100 
-    disabled:text-neutral-100 
+    disabled:text-neutral-100
     dark:text-neutral-900 
     dark:disabled:text-neutral-900 
     
     hover:text-neutral-900 
     disabled:hover:text-neutral-900 
     dark:hover:text-neutral-100 
-    dark:disabled:hover:text-neutral-100 
+    dark:disabled:hover:text-neutral-900 
 
     !bg-neutral-900 
     dark:!bg-neutral-100 
     
-    hover:!bg-neutral-300 
-    disabled:hover:!bg-neutral-300 
-    dark:hover:!bg-neutral-600 
-    dark:disabled:hover:!bg-neutral-600;
+    hover:!bg-neutral-100 
+    disabled:hover:!bg-neutral-100 
+    dark:hover:!bg-neutral-900 
+    dark:disabled:hover:!bg-neutral-100
+
+    hover:ring-2
+    hover:ring-neutral-900
+    dark:hover:ring-neutral-100
+    
+    focus:ring-2
+    disabled:focus:ring-0
+    focus:ring-neutral-900
+    dark:focus:ring-neutral-100;
 }
 
-button.secondary {
-    @apply text-neutral-900 
-    disabled:text-neutral-900 
-    dark:text-neutral-100 
-    dark:disabled:text-neutral-100 
+button.inverse {
+    @apply !inline-flex px-5 py-3 my-4 text-base items-center text-center rounded-lg shadow-sm focus-visible:outline transition-all duration-300 ease-in cursor-pointer disabled:opacity-100 font-bold shadow-lg shadow-neutral-900/30 dark:shadow-neutral-900/30
+    
+    text-neutral-900 
+    disabled:text-neutral-900
+    dark:text-neutral-900 
+    dark:disabled:text-neutral-900 
     
     hover:text-neutral-900 
     disabled:hover:text-neutral-900 
-    dark:hover:text-neutral-100 
-    dark:disabled:hover:text-neutral-100 
+    dark:hover:text-neutral-900 
+    dark:disabled:hover:text-neutral-900
+
+    !bg-neutral-100 
+    dark:!bg-neutral-900 
+    
+    hover:!bg-neutral-600 
+    disabled:hover:!bg-neutral-300 
+    dark:hover:!bg-neutral-100 
+    dark:disabled:hover:!bg-neutral-100
+
+    hover:ring-2
+    hover:ring-neutral-900
+    dark:hover:ring-neutral-900
+    
+    focus:ring-2
+    disabled:focus:ring-0
+    focus:ring-neutral-900
+    dark:focus:ring-neutral-100;
+}
+
+button.secondary {
+    @apply shadow-none
+    
+    text-neutral-500 
+    disabled:text-neutral-500 
+    dark:text-neutral-300
+    dark:disabled:text-neutral-300
+    
+    hover:text-neutral-500  
+    disabled:hover:text-neutral-500 
+    dark:hover:text-neutral-300 
+    dark:disabled:hover:text-neutral-300 
 
     !bg-neutral-200 
-    dark:!bg-neutral-800 
+    dark:!bg-neutral-600 
     
     hover:!bg-neutral-300 
     disabled:hover:!bg-neutral-300 
-    dark:hover:!bg-neutral-700 
-    dark:disabled:hover:!bg-neutral-700;
+    dark:hover:!bg-neutral-500 
+    dark:disabled:hover:!bg-neutral-500
+
+    hover:ring-2
+    hover:ring-neutral-400
+    dark:hover:ring-neutral-300
+    
+    focus:ring-2
+    disabled:focus:ring-0
+    focus:ring-neutral-500
+    dark:focus:ring-neutral-300;
+}
+
+button.secondary.inverse {
+    @apply shadow-none
+    
+    text-neutral-500 
+    disabled:text-neutral-500 
+    dark:text-neutral-300
+    dark:disabled:text-neutral-300
+    
+    hover:text-neutral-500  
+    disabled:hover:text-neutral-500 
+    dark:hover:text-neutral-300 
+    dark:disabled:hover:text-neutral-300 
+
+    !bg-neutral-600 
+    dark:!bg-neutral-600 
+    
+    hover:!bg-neutral-400 
+    disabled:hover:!bg-neutral-400 
+    dark:hover:!bg-neutral-500 
+    dark:disabled:hover:!bg-neutral-500
+
+    hover:ring-2
+    hover:ring-neutral-500
+    dark:hover:ring-neutral-300
+    
+    focus:ring-2
+    disabled:focus:ring-0
+    focus:ring-neutral-500
+    dark:focus:ring-neutral-300;
 }
 
 button.hamburger,
@@ -85,12 +174,12 @@ button.closeModal {
     focus:!ring-transparent
     dark:focus:!ring-transparent
     
-    text-neutral-900 
+    /* text-neutral-900  */
     disabled:text-neutral-900 
     dark:text-neutral-100 
     dark:disabled:text-neutral-100 
     
-    hover:text-neutral-900 
+    /* hover:text-neutral-900  */
     disabled:hover:text-neutral-900 
     dark:hover:text-neutral-100 
     dark:disabled:hover:text-neutral-100 
@@ -101,7 +190,9 @@ button.closeModal {
     hover:!bg-transparent 
     disabled:hover:!bg-transparent 
     dark:hover:!bg-transparent 
-    dark:disabled:hover:!bg-transparent;
+    dark:disabled:hover:!bg-transparent
+
+    hover:ring-0;
 }
 
 button.closeModal {
@@ -109,7 +200,7 @@ button.closeModal {
 }
 
 button.mode {
-    @apply transition-all duration-300 ease-in cursor-pointer
+    @apply transition-all duration-300 ease-in cursor-pointer !rounded-full !p-2.5 !shadow-none !ring-0
 
     focus:!outline-none
     disabled:focus:!outline-none
@@ -118,11 +209,36 @@ button.mode {
     focus:!ring-transparent
     dark:focus:!ring-transparent
 
-    !bg-neutral-100 
-    dark:!bg-neutral-900
+    focus-visible:!outline-none
+    focus-visible:!ring-0
 
-    hover:!bg-neutral-300
-    dark:hover:!bg-neutral-600;
+
+    !ring-transparent
+    !ring-offset-0
+    !ring-offset-transparent
+    !outline-0
+    !outline-transparent
+    !outline-none
+    !outline-offset-0
+
+    hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none  active:!outline-none
+
+    hover:!ring-0
+    active:!ring-0
+
+    !text-neutral-900
+    dark:!text-neutral-100
+
+    hover:!text-neutral-900
+    hover:dark:!text-neutral-100
+
+    !bg-transparent 
+    dark:!bg-transparent
+
+    hover:!bg-transparent
+    dark:hover:!bg-transparent
+
+    /* text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5 */;
 }
 
 /* button.colormode {
@@ -154,10 +270,28 @@ button.mode {
     dark:disabled:hover:!bg-transparent;
 } */
 
+div.speed_dial button {
+    @apply !my-0
+
+    !text-neutral-100
+    dark:!text-neutral-900
+
+    !bg-neutral-900 
+    dark:!bg-neutral-100 
+
+    hover:!bg-neutral-500
+    dark:hover:!bg-neutral-300
+
+    focus-within:!bg-neutral-900 
+    dark:focus-within:!bg-neutral-100
+    
+    text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm rounded-full !p-3;
+}
+
 /* forms */
 input,
 textarea {
-    @apply block w-full !rounded-md !border-0 px-3.5 py-2 !shadow-sm !ring-1 ring-inset !ring-neutral-300 dark:!ring-neutral-600 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:!ring-neutral-600 dark:focus:!ring-neutral-300 sm:text-sm sm:leading-6 !bg-neutral-300 dark:!bg-neutral-600;
+    @apply block w-full !rounded-md !border-0 px-3.5 py-2 !shadow-sm !ring-1 ring-inset !ring-neutral-300 dark:!ring-neutral-600 placeholder:text-neutral-500 focus:ring-2 focus:ring-inset focus:!ring-neutral-600 dark:focus:!ring-neutral-300 sm:text-sm sm:leading-6 !bg-neutral-300 dark:!bg-neutral-600;
 }
 
 /* modals */
@@ -256,10 +390,4 @@ textarea {
         transform: translateY(-100%);
         display: none;
     }
-}
-
-/* speed dial */
-.speed_dial button {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
 }

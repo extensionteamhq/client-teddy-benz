@@ -2,6 +2,7 @@
 interface SiteInfo {
     siteName: string;
     siteURL: string;
+    siteDomain: string;
     timeZone: string;
 
     orgName: string;
@@ -111,6 +112,7 @@ interface LayoutConfig {
 const site: SiteInfo = {
     siteName: 'Personal Branded Site',
     siteURL: 'https://domain.com/',
+    siteDomain: 'domain.com',
     timeZone: '-500',
 
     orgName: 'Personal Branded Websites',

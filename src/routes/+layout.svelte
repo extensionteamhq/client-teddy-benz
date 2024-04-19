@@ -13,7 +13,7 @@
     // node modules
     import Icon from '@iconify/svelte';
     // Component imports
-    import { layoutConfig } from '../lib/data/layout';
+    import { layoutConfig } from '$lib/data/layout';
     import NotFound from '$lib/components/base/NotFound.svelte';
     import Privacy from '$lib/components/base/Privacy.svelte';
     import CalendlyModal from '$lib/components/modals/CalendlyModal.svelte';
@@ -87,7 +87,7 @@
 
     // debug
     // console.log($page.error); // Add this line to debug
-    $: isNotFound = $page.error?.message === 'Not Found' && !CurrentComponent
+    $: isNotFound = $page.error?.message === 'Not Found' && !CurrentComponent;
 </script>
 
 {#if CurrentComponent}

@@ -23,7 +23,7 @@
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold">Designed To Help You Expand</h2>
             <p class="mb-4 sm:text-xl"
                 >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
-            <button type="button" class="mr-4 my-4" on:click={handleConnect}
+            <button type="button" class="mr-2 my-4" on:click={handleConnect}
                 >Let's Connect
                 <svg class="w-5 h-5 ml-2 -mr-1 hidden md:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                     ><path
@@ -32,7 +32,7 @@
                         clip-rule="evenodd"></path
                     ></svg>
             </button>
-            <button type="button" class="mx-4 secondary" on:click={handleCalendly}>Book A Meeting </button>
+            <button type="button" class="ml-2 my-4 secondary" on:click={handleCalendly}>Book A Meeting </button>
         </div>
         <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
             <div>

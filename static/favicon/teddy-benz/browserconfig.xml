@@ -3,8 +3,7 @@
     <msapplication>
         <tile>
             <square150x150logo src="/favicon/teddy-benz/mstile-150x150.png"/>
-            <square310x310logo src="/favicon/teddy-benz/mstile-310x310.png"/>
-            <TileColor>#ffffff</TileColor>
+            <TileColor>#6a8ed9</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

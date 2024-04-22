@@ -192,7 +192,7 @@ const vCard: vCard = {
 
 // Define a logo object
 const logo: Logo = {
-    src: '/images/teddy-benz-headshot-1200x1200.webp',
+    src: '/images/Teddy-Benz-Headshot-custom-bg-720x720.webp',
     alt: 'Teddy Benz',
 };
 

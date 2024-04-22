@@ -13,7 +13,7 @@
     }
     .primary-color {
         @apply text-neutral-900;
-        @apply bg-neutral-900;
+        @apply bg-primary-900;
     }
     .opposing-color {
         @apply text-neutral-900;
@@ -54,12 +54,12 @@ button {
     dark:hover:text-neutral-100 
     dark:disabled:hover:text-neutral-900 
 
-    !bg-neutral-900 
+    !bg-primary-900 
     dark:!bg-neutral-100 
     
     hover:!bg-neutral-100 
     disabled:hover:!bg-neutral-100 
-    dark:hover:!bg-neutral-900 
+    dark:hover:!bg-primary-900 
     dark:disabled:hover:!bg-neutral-100
 
     hover:ring-2
@@ -86,7 +86,7 @@ button.inverse {
     dark:disabled:hover:text-neutral-900
 
     !bg-neutral-100 
-    dark:!bg-neutral-900 
+    dark:!bg-primary-900 
     
     hover:!bg-neutral-600 
     disabled:hover:!bg-neutral-300 
@@ -276,13 +276,13 @@ div.speed_dial button {
     !text-neutral-100
     dark:!text-neutral-900
 
-    !bg-neutral-900 
+    !bg-primary-900 
     dark:!bg-neutral-100 
 
     hover:!bg-neutral-500
     dark:hover:!bg-neutral-300
 
-    focus-within:!bg-neutral-900 
+    focus-within:!bg-primary-900 
     dark:focus-within:!bg-neutral-100
     
     text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm rounded-full !p-3;

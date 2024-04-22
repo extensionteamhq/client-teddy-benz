@@ -5,6 +5,13 @@ export default {
     content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'],
     theme: {
         extend: {
+            colors: {
+                primary: {
+                    DEFAULT: '#6a8ed9',
+                    900: '#6a8ed9',
+                },
+            },
+
             // screens: {},
             // colors: {
             //     ...colors,

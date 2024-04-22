@@ -3,6 +3,7 @@ User-agent: *
 # Specific disallow rules
 Disallow: /*.js$
 Disallow: /*.json
+Disallow: /vcard
 Disallow: /cookie-policy
 Disallow: /disclaimers
 Disallow: /privacy-policy

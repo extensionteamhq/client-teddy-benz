@@ -47,6 +47,19 @@
                             {layoutConfig.site.orgTitle}
                             <br />
                         {/if}
+                        {#if layoutConfig.site.telType_02 !== ''}
+                            <b>{layoutConfig.site.telType_02}:</b>
+                            <a href="tel:{layoutConfig.site.telNumDigits_02}">{layoutConfig.site.telNumber_02}</a>
+                            <br />
+                        {/if}
+                        {#if layoutConfig.site.emailAdd_02 !== ''}
+                            <b>Email:</b>
+                            <a href="mailto:{layoutConfig.site.emailAdd_02}">{layoutConfig.site.emailAdd_02}</a>
+                            <br />
+                        {/if}
+                        {#if layoutConfig.site.urlAdd_02 !== ''}
+                            <b>Website:</b> <a href={layoutConfig.site.urlAdd_02}>{layoutConfig.site.urlAdd_02}</a>
+                        {/if}
                     </p>
                 {/if}
             </div>
@@ -84,8 +97,16 @@
                 </div>
                 <div class="col-span-11">
                     <p class="m-0">
+                        {#if layoutConfig.site.addType_02 !== ''}
+                            <b>{layoutConfig.site.addType_02}</b>
+                            <br />
+                        {/if}
                         {#if layoutConfig.site.orgName !== ''}
                             {layoutConfig.site.orgName}
+                            <br />
+                        {/if}
+                        {#if layoutConfig.site.addressName_02 !== ''}
+                            {layoutConfig.site.addressName_02}
                             <br />
                         {/if}
                         {#if layoutConfig.site.addStreet1_02 !== ''}
@@ -95,16 +116,18 @@
                             {layoutConfig.site.addStreet2_02}
                             <br />
                         {/if}
-                        {#if layoutConfig.site.addCity_02 !== ''}
-                            {layoutConfig.site.addCity_02}
-                        {/if}
                         {#if layoutConfig.site.addCity_02 && layoutConfig.site.addRegion_02 !== ''}
-                            , {layoutConfig.site.addRegion_02}
-                        {:else}
+                            {layoutConfig.site.addCity_02}, {layoutConfig.site.addRegion_02}
+                        {:else if layoutConfig.site.addCity_02 !== '' && layoutConfig.site.addRegion_02 == ''}
+                            {layoutConfig.site.addCity_02},
+                        {:else if layoutConfig.site.addCity_02 == '' && layoutConfig.site.addRegion_02 !== ''}
                             {layoutConfig.site.addRegion_02}
                         {/if}
                         {#if layoutConfig.site.addPostalCode_02 !== ''}
                             {layoutConfig.site.addPostalCode_02}
+                        {/if}
+                        {#if layoutConfig.site.addCountry_02 !== ''}
+                            {layoutConfig.site.addCountry_02}
                         {/if}
                     </p>
                 </div>
@@ -124,6 +147,14 @@
                 </div>
                 <div class="col-span-11">
                     <p class="m-0">
+                        {#if layoutConfig.site.addType_01 !== ''}
+                            <b>{layoutConfig.site.addType_01}</b>
+                            <br />
+                        {/if}
+                        {#if layoutConfig.site.addressName_01 !== ''}
+                            {layoutConfig.site.addressName_01}
+                            <br />
+                        {/if}
                         {#if layoutConfig.site.addStreet1_01 !== ''}
                             {layoutConfig.site.addStreet1_01}
                         {/if}
@@ -131,16 +162,18 @@
                             {layoutConfig.site.addStreet2_01}
                             <br />
                         {/if}
-                        {#if layoutConfig.site.addCity_01 !== ''}
-                            {layoutConfig.site.addCity_01}
-                        {/if}
                         {#if layoutConfig.site.addCity_01 && layoutConfig.site.addRegion_01 !== ''}
-                            , {layoutConfig.site.addRegion_01}
-                        {:else}
+                            {layoutConfig.site.addCity_01}, {layoutConfig.site.addRegion_01}
+                        {:else if layoutConfig.site.addCity_01 !== '' && layoutConfig.site.addRegion_01 == ''}
+                            {layoutConfig.site.addCity_01},
+                        {:else if layoutConfig.site.addCity_01 == '' && layoutConfig.site.addRegion_01 !== ''}
                             {layoutConfig.site.addRegion_01}
                         {/if}
                         {#if layoutConfig.site.addPostalCode_01 !== ''}
                             {layoutConfig.site.addPostalCode_01}
+                        {/if}
+                        {#if layoutConfig.site.addCountry_01 !== ''}
+                            {layoutConfig.site.addCountry_01}
                         {/if}
                     </p>
                 </div>
@@ -160,6 +193,7 @@
                 </div>
                 <div class="col-span-11">
                     <p class="m-0">
+                        <b>Note</b><br />
                         {layoutConfig.site.vCardNote}
                     </p>
                 </div>

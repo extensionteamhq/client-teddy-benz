@@ -127,7 +127,7 @@ const site: SiteInfo = {
     lastName: 'Benz',
     suffixName: '',
 
-    addType_01: 'HOME',
+    addType_01: 'Home',
     addressName_01: '',
     addStreet1_01: '',
     addStreet2_01: '',
@@ -135,30 +135,31 @@ const site: SiteInfo = {
     addRegion_01: 'SC',
     addPostalCode_01: '',
     addCountry_01: 'United States',
-    addType_02: 'WORK',
+
+    addType_02: 'Work',
     addressName_02: '',
     addStreet1_02: '',
     addStreet2_02: '',
-    addCity_02: '',
-    addRegion_02: '',
+    addCity_02: 'Greenville',
+    addRegion_02: 'SC',
     addPostalCode_02: '',
-    addCountry_02: '',
+    addCountry_02: 'United States',
 
-    telType_01: 'HOME',
+    telType_01: 'Home',
     telNumber_01: '',
     telNumDigits_01: '',
-    telType_02: 'CELL',
+    telType_02: 'Mobile',
     telNumber_02: '+1 (716) 817-4056',
     telNumDigits_02: '17168174056',
 
-    emailType_01: 'HOME',
+    emailType_01: 'Home',
     emailAdd_01: '',
-    emailType_02: 'WORK',
-    emailAdd_02: 'teddy@creativehome.co',
+    emailType_02: 'Work',
+    emailAdd_02: 'teddy@creativeHome.co',
 
-    urlType_01: 'PERSONAL',
+    urlType_01: 'Personal',
     urlAdd_01: 'https://teddybenz.com/',
-    urlType_02: 'WORK',
+    urlType_02: 'Work',
     urlAdd_02: '',
 
     socialType_01: 'Facebook',
@@ -181,7 +182,7 @@ const site: SiteInfo = {
     socialHandle_09: '',
 
     vCardNote:
-        "From Buffalo, NY. Currently in Greenville, SC. Looking to expand my real estate holdings in the Carolinas and Georgia. I also do a lot of land wholesaling. Let's work together and do a deal.",
+        "From Buffalo, NY. Currently in Greenville, SC. Looking to expand my real estate holdings in the Carolinas and Georgia. I also do a lot of land wholesaling. Let's Work together and do a deal.",
 };
 
 // Define a vCard object

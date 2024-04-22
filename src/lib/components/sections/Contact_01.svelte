@@ -87,7 +87,8 @@
             <!-- contact form -->
             <div class="pt-6 py-24 sm:py-32 lg:pt-8">
                 <div class="mx-auto max-w-2xl text-center">
-                    <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl">Contact Me</h2>
+                    <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-darker-300 dark:text-primary"
+                        >Contact Me</h2>
                     <p class="sm:text-xl text-center">I help companies and individuals connect with with the right business partners.</p>
                 </div>
                 <form action="/" method="POST" class="relative mx-auto mt-16 max-w-xl sm:mt-20 text-left" on:submit={handleFormSubmit}>

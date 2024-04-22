@@ -49,8 +49,8 @@
                 if (honeyPot) return console.log('Honeypot was populated.');
                 const body = { ...$myForm.summary };
 
-                // sends to brandedsites@extension.team
-                const req = await fetch('https://formspree.io/f/xleqonkk', {
+                // sends to teddy@creativehome.co
+                const req = await fetch('https://formspree.io/f/mleqapbj', {
                     method: 'POST',
                     body: JSON.stringify(body),
                     headers: {

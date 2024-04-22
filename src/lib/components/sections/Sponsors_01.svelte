@@ -48,7 +48,8 @@
                             d="M1113.8 1789.1c37.5 0 69.9 18.9 83.6 54.1H1162c-9.6-19.2-26.7-28.2-48.2-28.2-35.7 0-61.6 25.4-61.6 66.1s25.9 66.3 61.6 66.3c21.5 0 38.6-9.1 48.2-28.2h35.5c-13.7 35.2-46.1 53.9-83.6 53.9-50.8 0-91.9-37.8-91.9-91.9-.1-54 41.1-92.1 91.8-92.1zM1308.1 1791.4v156.2h60.9v23.8h-90.4v-180h29.5zM1522.2 1973.2c-50.8 0-91.9-38.1-91.9-92.2 0-53.9 41.2-91.9 91.9-91.9 51.3 0 91.9 38.1 91.9 91.9.1 54.1-40.6 92.2-91.9 92.2zm0-25.6c35.7 0 61.6-25.9 61.6-66.5 0-40.7-25.9-66.1-61.6-66.1s-61.6 25.4-61.6 66.1c0 40.6 25.9 66.5 61.6 66.5zM1749.1 1973.2c-36 0-63.7-19.7-63.7-51.5h31.6c1.3 14.8 11.7 26.7 32.1 26.7 20.7 0 32.4-11.1 32.4-26.4 0-43.5-95.5-15.3-95.5-81.6 0-31.6 25.1-51.3 61.9-51.3 34.4 0 58.8 18.1 61.4 49h-32.6c-1-12.2-11.7-23.3-30.3-23.8-17.1-.5-30.3 7.8-30.3 25.1 0 40.7 95.3 15.3 95.3 81.1-.2 26.8-22.2 52.7-62.3 52.7zM1992.3 1815.3h-69.9v52.8h62.2v24.1h-62.2v55.2h69.9v24.1h-99.4v-180.2h99.4v24z" /></g
                     ></svg>
                 <p class="text-lg font-bold mt-3.5 mb-4">Solid Close</p>
-                <p class="font-light mt-3.5 mb-4">Top-Tier Transaction Coordination Services for Seasoned Real Estate Investors.</p>
+                <p class="font-light mt-3.5 mb-4"
+                    >Top-Tier Transaction Coordination Services for Seasoned Real Estate Investors, Gators, and Private Money Lenders.</p>
                 <p class="font-light text-sm mt-3.5 mb-4 text-neutral-500 dark:text-neutral-500"
                     ><svg class="h-4 inline-block align-middle mr-2 pb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/up-right-from-square?f=classic&s=solid - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path

@@ -27,7 +27,7 @@
                 potential partners. Let's explore how we can collaborate to achieve outstanding results and close more deals together.</p>
             <div class="mx-auto mt-8 aspect-video aspect-w-16 aspect-h-9 w-full rounded-lg">
                 <iframe
-                    src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1"
+                    src="https://www.youtube.com/embed/NpEaa2P7qZI?si=dFoAaCYIi8q_a-X1&enablejsapi=1"
                     title="YouTube video player"
                     allowfullscreen
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

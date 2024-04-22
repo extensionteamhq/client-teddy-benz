@@ -246,7 +246,7 @@ export const layoutConfig: LayoutConfig = {
     logo,
     infobanner: {
         component: InfoBanner_01,
-        visible: true,
+        visible: false,
     },
     navbar: NavBar_01,
     hero: Hero_01,
@@ -264,15 +264,15 @@ export const layoutConfig: LayoutConfig = {
     },
     video: {
         component: ContentVideo_01,
-        visible: true,
+        visible: false,
     },
     gallery: {
         component: Gallery_01,
-        visible: true,
+        visible: false,
     },
     cta: {
         component: CallToAction_01,
-        visible: true,
+        visible: false,
     },
     sponsors: {
         component: Sponsors_01,
@@ -280,7 +280,7 @@ export const layoutConfig: LayoutConfig = {
     },
     newsletter: {
         component: Newsletter_01,
-        visible: true,
+        visible: false,
     },
     contact: {
         component: Contact_01,

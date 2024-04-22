@@ -4,7 +4,7 @@
         <p class="sm:text-xl text-center">Graciously supported by these sponsors, helping me grow, expand, and connect with the world!</p>
         <div class="space-y-4 sm:grid grid-cols-2 sm:gap-4 xl:gap-8 sm:space-y-0 md:mb-8 md:mt-12">
             <a
-                href="https://extension.team/"
+                href="https://extension.team/personal-sites/"
                 target="_blank"
                 class="block py-12 px-8 text-center bg-neutral-50 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700 rounded-lg shadow-lg shadow-neutral-900/8">
                 <svg

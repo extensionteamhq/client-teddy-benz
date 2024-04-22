@@ -39,14 +39,14 @@
                 </button>
                 <button type="button" class="secondary" on:click={() => handleScroll('meet-teddy')}> Meet Teddy </button>
                 <div class="mt-10">
-                    <span class="bg-primary-200 dark:bg-darker-200 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full"
-                        >&#127969; Real Estate Investor</span>
-                    <span class="bg-primary-500 dark:bg-darker-500 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full"
-                        >&#128295; Integrator</span>
-                    <span class="bg-green-300 dark:bg-green-700 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full"
-                        >&#128010; Gator</span>
-                    <span class="bg-purple-300 dark:bg-purple-700 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full"
-                        >&#127991; Wholesaler</span>
+                    <span class="bg-primary-200 dark:bg-darker-200 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full nowrap"
+                        >&#127969;&nbsp;Real Estate Investor</span>
+                    <span class="bg-primary-500 dark:bg-darker-500 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full nowrap"
+                        >&#128295;&nbsp;Integrator</span>
+                    <span class="bg-green-300 dark:bg-green-700 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full nowrap"
+                        >&#128010;&nbsp;Gator</span>
+                    <span class="bg-purple-300 dark:bg-purple-700 text-gray-500 dark:text-gray-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full nowrap"
+                        >&#127991;&nbsp;Wholesaler</span>
                 </div>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex place-self-end">

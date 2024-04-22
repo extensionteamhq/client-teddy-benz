@@ -12,7 +12,7 @@
 </script>
 
 <!--Footer container-->
-<footer class="flex flex-col items-center text-center">
+<footer class="flex flex-col items-center text-center bg-primary-300 dark:bg-darker-400">
     <div class="container pt-9">
         <!-- Social media icons container -->
         <div class="mb-6 flex flex-wrap justify-center space-x-2">
@@ -108,7 +108,7 @@
     </div>
 
     <!--Copyright section-->
-    <div class="w-full bg-neutral-100 dark:bg-neutral-900 text-center">
+    <div class="w-full text-center">
         <FooterCopyright spanClass="block text-sm sm:text-center" href="/" by={layoutConfig.site.siteName} />
         <div class="sm:text-center">
             <p class="text-sm leading-8">

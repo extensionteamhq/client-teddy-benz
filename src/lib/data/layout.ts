@@ -252,7 +252,7 @@ export const layoutConfig: LayoutConfig = {
     hero: Hero_01,
     feature: {
         component: Feature_01,
-        visible: true,
+        visible: false,
     },
     service: {
         component: Service_01,

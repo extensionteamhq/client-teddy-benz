@@ -137,9 +137,9 @@
                                 class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400 {$isScroll
                                     ? 'text-[14px]'
                                     : ' text-[16px]'}"
-                                href="/#services"
-                                on:click|preventDefault={(e) => handleLinkClick(e, 'services')}>
-                                Services
+                                href="/#benefits"
+                                on:click|preventDefault={(e) => handleLinkClick(e, 'benefits')}>
+                                Benefits
                             </a>
                         </li>
                         <!-- About Link -->
@@ -148,9 +148,9 @@
                                 class="lg:px-2 transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-500 dark:text-neutral-50 hover:text-neutral-900 dark:hover:text-neutral-400 focus:text-neutral-900 dark:focus:text-neutral-400 active:text-neutral-900 dark:active-neutral-400 {$isScroll
                                     ? 'text-[14px]'
                                     : ' text-[16px]'}"
-                                href="/#about"
-                                on:click|preventDefault={(e) => handleLinkClick(e, 'about')}>
-                                About
+                                href="/#meet-teddy"
+                                on:click|preventDefault={(e) => handleLinkClick(e, 'meet-teddy')}>
+                                Meet Teddy
                             </a>
                         </li>
                         <!-- Contact Link -->

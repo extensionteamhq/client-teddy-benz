@@ -15,13 +15,13 @@
     const handleConnect = getContext<() => void>('handleConnect');
 </script>
 
-<section id="services" class="py-8 lg:py-16 my-10 text-center relative">
+<section id="benefits" class="py-8 lg:py-16 my-10 text-center relative">
     <div class="w-full max-w-screen-2xl mx-auto py-4 px-8">
         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-darker-300 dark:text-primary"
-            >Unlock Your Potential with Unparalleled Connections</h2>
+            >Why Partner With Teddy</h2>
         <p class="sm:text-xl text-center">
-            Leverage my extensive network and strategic partnerships to open doors to new opportunities, insights, and growth paths that were previously out of
-            reach.
+            Discover the advantages of partnering with a seasoned real estate professional. Explore how my unique services can elevate your investment strategy
+            and streamline your operations for maximum efficiency and profitability.
         </p>
         <div class="mt-8 lg:mt-12 space-y-8 md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-12 md:space-y-0 text-center">
             <div>
@@ -31,8 +31,8 @@
                     <path
                         d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
                 </svg>
-                <h3 class="mb-2 text-xl font-bold">Strategic Networking</h3>
-                <p class="mb-4">Gain access to a network of professionals, helping you accelerate your personal and professional goals.</p>
+                <h3 class="mb-2 text-xl font-bold">System Integration</h3>
+                <p class="mb-4">Streamline your real estate operations with advanced CRM and data solutions.</p>
             </div>
             <div>
                 <svg class="mx-auto mb-4 w-12 h-12 text-primary-900 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
@@ -54,8 +54,8 @@
                         clip-rule="evenodd">
                     </path>
                 </svg>
-                <h3 class="mb-2 text-xl font-bold">Personalized Mentorship</h3>
-                <p class="mb-4">Benefit from personalized advice that taps into the experience and success of someone who's been there.</p>
+                <h3 class="mb-2 text-xl font-bold">Exclusive Deals</h3>
+                <p class="mb-4">Gain early access to profitable wholesale opportunities not available on the open market.</p>
             </div>
         </div>
         <div class="text-center w-full">

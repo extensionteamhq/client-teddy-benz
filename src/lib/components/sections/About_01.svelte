@@ -17,15 +17,14 @@
     export {};
 </script>
 
-<section id="about" class="py-8 lg:py-16 my-10 text-center relative">
+<section id="meet-teddy" class="py-8 lg:py-16 my-10 text-center relative bg-primary-300 dark:bg-darker-400">
     <div class="w-full max-w-screen-2xl mx-auto py-4 px-8">
         <div class="py-4 sm:text-center">
             <h2 class="mb-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl text-darker-300 dark:text-primary"
-                >Your Journey to Success: Guided by Experience</h2>
+                >Learn More And Let's Connect</h2>
             <p class="sm:text-xl text-center"
-                >Explore how my unique insights and steadfast support can turn your challenges into victories. Dive into my story to discover how you can tailor
-                the narrative to fit your personal goals and dreams.</p>
-            <!-- alt sample video = https://www.youtube.com/embed/wDchsz8nmbo?si=9S0uYSy_D_XRebQx -->
+                >Meet Teddy, your experienced partner in real estate investment. In this video, I share what I bring to the table and what I'm looking for in
+                potential partners. Let's explore how we can collaborate to achieve outstanding results and close more deals together.</p>
             <div class="mx-auto mt-8 aspect-video aspect-w-16 aspect-h-9 w-full rounded-lg">
                 <iframe
                     src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1"

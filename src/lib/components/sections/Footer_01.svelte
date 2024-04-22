@@ -48,7 +48,7 @@
             </a>
             <!-- linkedin -->
             <a
-                href="https://linkedin.com/{layoutConfig.site.socialHandle_03}"
+                href="https://linkedin.com/in/{layoutConfig.site.socialHandle_03}"
                 title="LinkedIn"
                 target="_blank"
                 type="button"
@@ -91,7 +91,7 @@
                     </svg>
                 </span>
             </a>
-            <!-- tiktok -->
+            <!-- threads -->
             <a
                 href="https://www.threads.net/@{layoutConfig.site.socialHandle_07}"
                 title="TikTok"

@@ -12,7 +12,8 @@ EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:teddy@creativehome.co
 TITLE:Real Estate Investor
 
 N:Benz;Teddy;;;
-PHOTO;TYPE=PNG;VALUE=URI:http://teddybenz.com/teddy-benz-headshot-1200x1200.webp
+PHOTO;TYPE=WEBP;VALUE=URI:http://teddybenz.com/Teddy-Benz-Headshot-custom-bg-720x720.webp
+ADR;TYPE=HOME:;;;Greenville;SC;;United States
 TEL;TYPE=CELL;TYPE=VOICE;TYPE=PREF:+1 (716) 817-4056
 URL;TYPE=personal:https://teddybenz.com/
 TZ:-0500

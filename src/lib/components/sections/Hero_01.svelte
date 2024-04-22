@@ -20,9 +20,9 @@
     <div class="">
         <div class="grid gap-8 lg:grid-cols-12 items-center mx-8 my-8 lg:my-24">
             <div class="place-self-center lg:col-span-7">
-                <h1 class="mb-4 font-extrabold tracking-tight leading-none text-4xl md:text-5xl xl:text-6xl">Welcome To Your Personal Branded Site</h1>
+                <h1 class="mb-4 font-extrabold tracking-tight leading-none text-4xl md:text-5xl xl:text-6xl">Hello. I'm Teddy Benz.</h1>
                 <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl"
-                    >Ready to turn possibilities into realities? Let's connect and embark on a journey towards success together. Reach out now and take the
+                    >Ready to turn your possibilities into realities? Let's connect and embark on a journey towards success together. Reach out now and take the
                     first step to transforming your vision into action. Your future starts here!</p>
                 <button type="button" class="mr-4" on:click={handleConnect}
                     >Let's Connect
@@ -33,7 +33,7 @@
                             clip-rule="evenodd"></path
                         ></svg>
                 </button>
-                <button type="button" class="secondary" on:click={() => handleScroll('about')}> Meet Your Guide </button>
+                <button type="button" class="secondary" on:click={() => handleScroll('about')}> Meet Teddy </button>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex place-self-end">
                 <Avatar src={layoutConfig.logo.src} size="none" class="rounded-lg w-max h-auto shadow-lg shadow-neutral-900/80" alt={layoutConfig.logo.alt} />

@@ -22,7 +22,7 @@
     }
 
     onMount(async () => {
-        await new Promise((resolve) => setTimeout(resolve, 3000)); 
+        await new Promise((resolve) => setTimeout(resolve, 3000));
 
         await tick();
 
@@ -36,7 +36,6 @@
             window.addEventListener('load', handleWindowLoad);
         }
     });
-
 </script>
 
 {#if isOpen}
@@ -70,13 +69,14 @@
                         {/if}
                         <div class="relative p-4 min-[0px]:overflow-y-auto">
                             <div class="px-6 py-20 pb-0 lg:px-8 max-w-screen-2xl mx-auto">
+                                <p class="text-2xl">Calender Integration Coming Soon…</p>
                                 <!-- Calendly inline widget -->
-                                <div
+                                <!-- <div
                                     class="calendly-inline-widget {$isLoading && 'hidden'}"
                                     data-url="https://calendly.com/brandedsites/30min?hide_gdpr_banner=1&background_color=f5f5f5&text_color=171717&primary_color=171717"
                                     style="min-width:320px;height:700px;">
                                 </div>
-                                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
                                 <!-- Calendly inline widget end -->
                             </div>
                         </div>

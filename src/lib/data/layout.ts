@@ -25,6 +25,7 @@ interface SiteInfo {
     addRegion_01: string;
     addPostalCode_01: string;
     addCountry_01: string;
+
     addType_02: string;
     addressName_02: string;
     addStreet1_02: string;
@@ -94,8 +95,8 @@ interface LayoutConfig {
     site: SiteInfo;
     logo: Logo;
     infobanner: SectionVisibility;
-    navbar: any; // Any Svelte component
-    hero: any; // Any Svelte component
+    navbar: SectionVisibility;
+    hero: SectionVisibility;
     feature: SectionVisibility;
     service: SectionVisibility;
     about: SectionVisibility;
@@ -105,7 +106,8 @@ interface LayoutConfig {
     sponsors: SectionVisibility;
     newsletter: SectionVisibility;
     contact: SectionVisibility;
-    footer: any; // Any Svelte component
+    footer: SectionVisibility;
+    speeddial: SectionVisibility;
 }
 
 // Define site info object
@@ -128,7 +130,7 @@ const site: SiteInfo = {
     suffixName: '',
 
     addType_01: 'Home',
-    addressName_01: '',
+    addressName_01: 'Home',
     addStreet1_01: '',
     addStreet2_01: '',
     addCity_01: 'Greenville',
@@ -140,12 +142,12 @@ const site: SiteInfo = {
     addressName_02: '',
     addStreet1_02: '',
     addStreet2_02: '',
-    addCity_02: 'Greenville',
-    addRegion_02: 'SC',
+    addCity_02: '',
+    addRegion_02: '',
     addPostalCode_02: '',
-    addCountry_02: 'United States',
+    addCountry_02: '',
 
-    telType_01: 'Home',
+    telType_01: '',
     telNumber_01: '',
     telNumDigits_01: '',
     telType_02: 'Mobile',
@@ -199,6 +201,8 @@ const logo: Logo = {
 
 // Import components as needed…
 
+import Speeddial from '$lib/components/base/Speeddial.svelte';
+
 // info banners
 import InfoBanner_01 from '$lib/components/sections/InfoBanner_01.svelte';
 
@@ -249,8 +253,14 @@ export const layoutConfig: LayoutConfig = {
         component: InfoBanner_01,
         visible: false,
     },
-    navbar: NavBar_01,
-    hero: Hero_01,
+    navbar: {
+        component: NavBar_01,
+        visible: true,
+    },
+    hero: {
+        component: Hero_01,
+        visible: true,
+    },
     feature: {
         component: Feature_01,
         visible: false,
@@ -287,5 +297,12 @@ export const layoutConfig: LayoutConfig = {
         component: Contact_01,
         visible: true,
     },
-    footer: Footer_01,
+    speeddial: {
+        component: Speeddial,
+        visible: true,
+    },
+    footer: {
+        component: Footer_01,
+        visible: true,
+    },
 };

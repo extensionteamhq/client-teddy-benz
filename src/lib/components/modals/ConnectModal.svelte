@@ -34,7 +34,7 @@
     $: hostname = $page.url.hostname;
     $: port = $page.url.port;
     $: domain = `${$page.url.protocol}//${$page.url.hostname}${$page.url.port ? `:${$page.url.port}` : ''}`;
-    $: fullPath = `${domain}/vcard.vcf`;
+    $: fullPath = `${domain}/vcard`;
 </script>
 
 {#if isOpen}
@@ -81,7 +81,7 @@
                                             <div class="block rounded-lg shadow-lg bg-neutral-50 dark:bg-neutral-700 shadow-neutral-900/30 py-10 pt-2">
                                                 <div class="p-6 py-0">
                                                     <h5 class="mt-2 mb-4 text-2xl font-bold tracking-tight leading-tight">My Digital Business Card</h5>
-                                                    <a href={fullPath} title={layoutConfig.vCard.alt} download={layoutConfig.vCard.src}>
+                                                    <a href={fullPath} title={layoutConfig.vCard.alt} data-sveltekit-preload-data="tap" data-sveltekit-reload>
                                                         <svg
                                                             class="max-full min-w-[293px] mx-auto text-center text-neutral-900 bg-neutral-100 rounded-lg shadow-lg shadow-neutral-900/60"
                                                             use:qr={{

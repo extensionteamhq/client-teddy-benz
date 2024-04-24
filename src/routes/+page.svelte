@@ -1,22 +1,12 @@
 <script lang="ts">
     // svelte core
-    import { onMount } from 'svelte';
+
     // svelte plugins
-    import { Modals, closeModal, openModal } from 'svelte-modals';
-    // flowbite plugins
 
-    // tw-element plugins
-    // import { Collapse, Modal, Tooltip } from 'tw-elements';
-
-    // node modules
+    // other plugins and modules
 
     // local
-    import { layoutConfig } from '../lib/data/layout';
-
-    // onMount(async () => {
-    //     const { Collapse, Modal, Tooltip, initTWE } = await import('tw-elements');
-    //     initTWE({ Collapse, Modal, Tooltip });
-    // });
+    import { layoutConfig } from '$lib/data/layout';
 </script>
 
 <svelte:head>
@@ -27,9 +17,9 @@
     <meta property="og:title" content="{layoutConfig.site.siteName} | Homepage" />
     <meta name="description" content="" />
     <meta property="og:description" content="" />
-    <meta name="author" content={layoutConfig.site.fullName} />
+    <meta name="author" content="{layoutConfig.site.fullName} - {layoutConfig.site.orgName}" />
     <meta property="og:image" content={layoutConfig.logo.src} />
-    <meta property="og:url" content="" />
+    <meta property="og:url" content={layoutConfig.site.siteURL} />
     <meta property="og:type" content="website" />
     <script type="application/ld+json">
         {
@@ -51,10 +41,17 @@
     </script>
 </svelte:head>
 
-<!-- The `container` class sets the max-width of an element to match the min-width of the current breakpoint. This is useful if you’d prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport. -->
+<!-- navbar -->
+{#if layoutConfig.navbar.visible}
+    <svelte:component this={layoutConfig.navbar.component} />
+{/if}
+
+<!-- main -->
 <main class="mx-auto" id="home">
     <!-- hero -->
-    <svelte:component this={layoutConfig.hero} />
+    {#if layoutConfig.hero.visible}
+        <svelte:component this={layoutConfig.hero.component} />
+    {/if}
 
     <!-- services -->
     {#if layoutConfig.service.visible}
@@ -101,3 +98,13 @@
         <svelte:component this={layoutConfig.sponsors.component} />
     {/if}
 </main>
+
+<!-- footer -->
+{#if layoutConfig.footer.visible}
+    <svelte:component this={layoutConfig.footer.component} />
+{/if}
+
+<!-- speeddial -->
+{#if layoutConfig.speeddial.visible}
+    <svelte:component this={layoutConfig.speeddial.component} />
+{/if}

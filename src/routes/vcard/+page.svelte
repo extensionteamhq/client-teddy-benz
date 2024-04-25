@@ -21,9 +21,9 @@
     <div class="flex flex-wrap w-full max-w-screen-2xl mx-auto items-center justify-between lg:text-left text-center">
         <div class="my-2 md:my-8 lg:my-16 xl:my-24 px-8 w-full">
             <!-- header -->
-            <div class="sm:text-center mb-0 lg:mb-4">
+            <div class="sm:text-center mt-4 mb-0 lg:mb-4">
                 <p class="text-sm font-semibold my-0">Digital Business Card</p>
-                <p class="text-sm font-semibold mt-1 mb-2">
+                <p class="text-base font-semibold mt-1 mb-2">
                     Handcrafted with
                     <span class="mx-auto [&>svg]:h-4 [&>svg]:w-4 text-red-600 inline-block align-middle">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
@@ -51,7 +51,7 @@
                         href="/vcard.vcf"
                         title="Digital Business Card"
                         type="button"
-                        class="self-center block my-auto rounded-md bg-transparent p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0">
+                        class="self-center block my-auto rounded-md bg-white p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0">
                         <span class="[&>svg]:h-6 [&>svg]:w-6">
                             <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                                 <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/download?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -62,31 +62,33 @@
                         </span>
                     </a>
                 </div>
-                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight my-0 mt-4 lg:mt-8">
-                    {#if layoutConfig.site.nickName != ''}
-                        {#if layoutConfig.site.firstName != ''}
+                <div class="bg-primary-300 dark:bg-darker-400 rounded-t-xl p-4 pb-0 mb-0">
+                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight my-0 mt-4 lg:mt-8">
+                        {#if layoutConfig.site.nickName != ''}
+                            {#if layoutConfig.site.firstName != ''}
+                                {layoutConfig.site.firstName}
+                            {/if}
+                            <span class="font-bold italic">&nbsp;&quot;{layoutConfig.site.nickName}&quot;&nbsp;</span>
+                            {#if layoutConfig.site.lastName != ''}
+                                {layoutConfig.site.lastName}
+                            {/if}
+                        {:else if layoutConfig.site.fullName != ''}
+                            {layoutConfig.site.fullName}
+                        {:else if layoutConfig.site.firstName != ''}
                             {layoutConfig.site.firstName}
+                        {:else if layoutConfig.site.siteName != ''}
+                            {layoutConfig.site.siteName}
                         {/if}
-                        <span class="font-bold italic">&nbsp;&quot;{layoutConfig.site.nickName}&quot;&nbsp;</span>
-                        {#if layoutConfig.site.lastName != ''}
-                            {layoutConfig.site.lastName}
+                    </h1>
+                    <p class="text-xl font-semibold leading-7 mt-2 mb-0">
+                        {#if layoutConfig.site.orgTitle != ''}
+                            {layoutConfig.site.orgTitle}
                         {/if}
-                    {:else if layoutConfig.site.fullName != ''}
-                        {layoutConfig.site.fullName}
-                    {:else if layoutConfig.site.firstName != ''}
-                        {layoutConfig.site.firstName}
-                    {:else if layoutConfig.site.siteName != ''}
-                        {layoutConfig.site.siteName}
-                    {/if}
-                </h1>
-                <p class="text-xl font-semibold leading-7 my-2">
-                    {#if layoutConfig.site.orgTitle != ''}
-                        {layoutConfig.site.orgTitle}
-                    {/if}
-                </p>
+                    </p>
+                </div>
             </div>
             <!-- main content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-primary-300 dark:bg-darker-400 rounded-b-xl p-4 mt-0 font-semibold">
                 <div>
                     <img
                         class="max-full mx-auto text-center text-neutral-900 bg-neutral-100 rounded-lg shadow-lg shadow-neutral-900/60"
@@ -142,24 +144,36 @@
                                         {/if}
                                         {#if layoutConfig.site.telNumDigits_02 || layoutConfig.site.telNumber_02 !== ''}
                                             <br />
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
-                                                ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/phone?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-                                                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" /></svg>
-                                            <a href="tel:{layoutConfig.site.telNumDigits_02}">{layoutConfig.site.telNumber_02}</a>
+
+                                            <a
+                                                href="tel:{layoutConfig.site.telNumDigits_02}"
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-primary-300 dark:hover:bg-darker-400 focus:outline-none focus:ring-0"
+                                                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
+                                                    ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/phone?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" /></svg
+                                                >{layoutConfig.site.telNumber_02}</a>
                                         {/if}
                                         {#if layoutConfig.site.emailAdd_02 !== ''}
                                             <br />
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
-                                                ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/envelope?f=classic&s=regular License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-                                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></svg>
-                                            <a href="mailto:{layoutConfig.site.emailAdd_02}">{layoutConfig.site.emailAdd_02}</a>
+
+                                            <a
+                                                href="mailto:{layoutConfig.site.emailAdd_02}"
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-primary-300 dark:hover:bg-darker-400 focus:outline-none focus:ring-0"
+                                                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
+                                                    ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/envelope?f=classic&s=regular License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                                                        d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></svg
+                                                >{layoutConfig.site.emailAdd_02}</a>
                                         {/if}
                                         {#if layoutConfig.site.urlAdd_02 !== ''}
                                             <br />
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
-                                                ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/earth-americas?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-                                                    d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" /></svg>
-                                            <a href={layoutConfig.site.urlAdd_02}>{layoutConfig.site.urlAdd_02}</a>
+
+                                            <a
+                                                href={layoutConfig.site.urlAdd_02}
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-primary-300 dark:hover:bg-darker-400 focus:outline-none focus:ring-0"
+                                                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
+                                                    ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/earth-americas?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                                                        d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" /></svg
+                                                >{layoutConfig.site.urlAdd_02}</a>
                                         {/if}
                                     </p>
                                 </div>
@@ -217,10 +231,14 @@
                                             <a href="mailto:{layoutConfig.site.emailAdd_01}">{layoutConfig.site.emailAdd_01}</a>
                                         {/if}
                                         {#if layoutConfig.site.urlAdd_01 !== ''}
-                                            <br /><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
-                                                ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/earth-americas?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-                                                    d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" /></svg>
-                                            <a href={layoutConfig.site.urlAdd_01}>{layoutConfig.site.urlAdd_01}</a>
+                                            <br />
+                                            <a
+                                                href={layoutConfig.site.urlAdd_01}
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-primary-300 dark:hover:bg-darker-400 focus:outline-none focus:ring-0"
+                                                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-auto inline pr-1"
+                                                    ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/earth-americas?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                                                        d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" /></svg
+                                                >{layoutConfig.site.urlAdd_01}</a>
                                         {/if}
                                     </p>
                                 </div>
@@ -236,7 +254,7 @@
                                                 d="M256 288A144 144 0 1 0 256 0a144 144 0 1 0 0 288zm-94.7 32C72.2 320 0 392.2 0 481.3c0 17 13.8 30.7 30.7 30.7H481.3c17 0 30.7-13.8 30.7-30.7C512 392.2 439.8 320 350.7 320H161.3z" /></svg>
                                     </span>
                                 </div>
-                                <div class="text-left">
+                                <div class="text-left m-0 leading-7 pl-4 lg:pl-4">
                                     {#if layoutConfig.site.socialHandle_01 !== ''}
                                         <div class="flex flex-wrap space-x-2 items-center">
                                             <!-- facebook -->
@@ -245,17 +263,16 @@
                                                 title="Facebook"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="[&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
                                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/facebook-f?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                                                         <path
                                                             d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_01}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_01}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_01}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_02 !== ''}
@@ -266,17 +283,16 @@
                                                 title="X-Twitter"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/x-twitter?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                                                         <path
                                                             d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_02}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_02}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_02}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_03 !== ''}
@@ -287,17 +303,16 @@
                                                 title="LinkedIn"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/linkedin-in?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                                                         <path
                                                             d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_03}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_03}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_03}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_04 !== ''}
@@ -308,17 +323,16 @@
                                                 title="Instagram"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/icons/instagram?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                                                         <path
                                                             d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_04}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_04}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_04}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_05 !== ''}
@@ -329,17 +343,16 @@
                                                 title="YouTube"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
                                                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/youtube?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                                         <path
                                                             d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_05}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_05}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_05}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_06 !== ''}
@@ -350,17 +363,16 @@
                                                 title="TikTok"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                                                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/tiktok?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                                         <path
                                                             d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
                                                     </svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_06}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_06}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_06}</a>
                                         </div>
                                     {/if}
                                     {#if layoutConfig.site.socialHandle_07 !== ''}
@@ -371,15 +383,14 @@
                                                 title="TikTok"
                                                 target="_blank"
                                                 type="button"
-                                                class="rounded-full bg-transparent p-3 transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0 whitespace-nowrap">
+                                                class="p-1 rounded-lg bg-transparent font-medium leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 focus:outline-none focus:ring-0">
                                                 <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512"
+                                                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512"
                                                         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/threads?f=brands&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
                                                             d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z" /></svg>
                                                 </span>
+                                                @{layoutConfig.site.socialHandle_07}
                                             </a>
-                                            <a href="https://facebook.com/{layoutConfig.site.socialHandle_07}" title="Facebook" target="_blank"
-                                                >@{layoutConfig.site.socialHandle_07}</a>
                                         </div>
                                     {/if}
                                 </div>
@@ -408,14 +419,14 @@
                 </div>
             </div>
             <!-- footer -->
-            <div class="sm:text-center mt-8 lg:mt-0 mb-0">
+            <div class="sm:text-center mt-8 lg:mt-0 mb-4">
                 <div class="flex items-center justify-center my-4">
                     <a
                         download={layoutConfig.vCard.src}
                         href="/vcard.vcf"
                         title="Digital Business Card"
                         type="button"
-                        class="self-center block my-auto rounded-md bg-transparent p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0">
+                        class="self-center block my-auto rounded-md bg-white p-3 mt-2 font-medium uppercase leading-normal transition duration-150 ease-in-out text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-300 dark:hover:bg-neutral-700 ring-1 ring-current focus:outline-none focus:ring-0">
                         <span class="[&>svg]:h-6 [&>svg]:w-6">
                             <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                                 <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com/icons/download?f=classic&s=solid License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -427,7 +438,7 @@
                     </a>
                 </div>
                 <p class="text-sm font-semibold my-0">Digital Business Card</p>
-                <p class="text-sm font-semibold mt-1 mb-2">
+                <p class="text-base font-semibold mt-1 mb-2">
                     Handcrafted with
                     <span class="mx-auto [&>svg]:h-4 [&>svg]:w-4 text-red-600 inline-block align-middle">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">

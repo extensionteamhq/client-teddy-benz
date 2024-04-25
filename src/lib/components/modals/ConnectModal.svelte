@@ -126,7 +126,7 @@
                                                 </div>
                                                 <div class="p-6 pb-0">
                                                     <div class="mx-auto max-sm text-center flex justify-center">
-                                                        <dl class="px-10 space-y-4 text-base leading-7 text-left">
+                                                        <dl class="space-y-4 text-base leading-7 text-left">
                                                             <div class="flex gap-x-4">
                                                                 <dt class="flex-none">
                                                                     <span class="sr-only">Contact</span>
